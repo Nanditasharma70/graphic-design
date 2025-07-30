@@ -2,9 +2,19 @@
 
 import { useState } from 'react';
 
-const tabs = ['Graphic Designing', 'Video Editing', 'Digital Marketing'];
+type CourseName = 'Graphic Designing' | 'Video Editing' | 'Digital Marketing';
 
-const batchData = {
+type Batch = {
+  day: string;
+  title: string;
+  start: string;
+  time: string;
+  mode: string;
+};
+
+const tabs: CourseName[] = ['Graphic Designing', 'Video Editing', 'Digital Marketing'];
+
+const batchData: Record<CourseName, Batch[]> = {
   'Graphic Designing': [
     {
       day: 'Weekday',
@@ -20,7 +30,7 @@ const batchData = {
       time: 'Evening 4:00 PM',
       mode: 'Online Only',
     },
-     {
+    {
       day: 'Weekday',
       title: 'Graphic Design - Morning',
       start: '17 July, August',
@@ -43,14 +53,13 @@ const batchData = {
       time: 'Evening 5:00 PM',
       mode: 'Offline Only',
     },
-     {
+    {
       day: 'Weekend',
       title: 'Video Editing - Weekend',
       start: '22 July, August',
       time: 'Evening 5:00 PM',
       mode: 'Offline Only',
     },
-
   ],
   'Digital Marketing': [
     {
@@ -67,7 +76,7 @@ const batchData = {
       time: 'Evening 6:00 PM',
       mode: 'Offline and Online (hybrid)',
     },
-     {
+    {
       day: 'Weekend',
       title: 'Digital Marketing - Weekend',
       start: '21 July, August',
@@ -78,18 +87,16 @@ const batchData = {
 };
 
 export default function UpcomingBatches() {
-  const [activeTab, setActiveTab] = useState('Graphic Designing');
+  const [activeTab, setActiveTab] = useState<CourseName>('Graphic Designing');
 
   return (
     <section className="py-16 bg-gradient-to-b from-white to-purple-50">
       <div className="max-w-7xl mx-auto px-4">
-        {/* Section Title */}
         <div className="text-center mb-10">
           <h2 className="text-3xl font-extrabold text-purple-600"> Upcoming Batches</h2>
           <p className="text-gray-500 mt-2">Choose the course and join our next batch</p>
         </div>
 
-        {/* Tabs */}
         <div className="flex justify-center gap-3 mb-10 flex-wrap">
           {tabs.map((tab) => (
             <button
@@ -106,7 +113,6 @@ export default function UpcomingBatches() {
           ))}
         </div>
 
-        {/* Cards Grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {batchData[activeTab].map((batch, idx) => (
             <div
