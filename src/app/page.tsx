@@ -9,6 +9,9 @@ import CourseSlider from '../components/CourseList';
 import AboutHighlights from '@/components/AboutHighlights';
 import PlacedStudents from '@/components/PlacedStudent';
 import WorkPortfolio from '@/components/WorkPortfolio';
+import StudentPortfolio from '@/components/StudentPortfolio';
+import Testimonial from '@/components/Testimonial';
+import CallNow from '@/components/CallNow';
 
 export default function Home() {
   return (
@@ -25,7 +28,10 @@ export default function Home() {
         <About />
     <WorkPortfolio/>
         <PlacedStudents/>
+        <StudentPortfolio/>
+        <Testimonial/>
         <AboutHighlights/>
+         <CallNow/>
         <Footer />
       </section>
     </div>
