@@ -10,7 +10,7 @@ export default function NewsletterCTA() {
           {/* Text Content */}
           <div className="max-w-2xl">
             <h2 className="text-3xl md:text-4xl font-extrabold leading-tight">
-              Let's Talk <span className="text-black">Career</span>
+              Let&apos; Talk for <span className="text-black">Career</span>
             </h2>
             <p className="mt-3 text-lg text-purple-100">
               Speak with our career counsellors and unlock your path to becoming a creative professional.

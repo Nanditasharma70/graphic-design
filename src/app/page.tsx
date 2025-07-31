@@ -19,19 +19,17 @@ export default function Home() {
       <FormWithOTP />
       <Header />
       <section className="mt-4 ">
-
         <Hero />
         <CourseSlider />
-       
         <CompanyLogos />
         <CategoryCards />
         <About />
-    <WorkPortfolio/>
-        <PlacedStudents/>
-        <StudentPortfolio/>
-        <Testimonial/>
-        <AboutHighlights/>
-         <CallNow/>
+        <WorkPortfolio />
+        <PlacedStudents />
+        <StudentPortfolio />
+        <Testimonial />
+        <AboutHighlights />
+        <CallNow />
         <Footer />
       </section>
     </div>
