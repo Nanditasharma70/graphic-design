@@ -2,7 +2,7 @@
 
 import { useRef } from 'react';
 import Image from 'next/image';
-import {  Eye, Share2 } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Eye, Share2 } from 'lucide-react';
 
 const students = [
   {
@@ -48,7 +48,7 @@ export default function StudentPortfolioCarousel() {
 
   const scroll = (dir: 'left' | 'right') => {
     if (scrollRef.current) {
-      const scrollValue = scrollRef.current.offsetWidth; // scroll by one screen (3 cards)
+      const scrollValue = scrollRef.current.offsetWidth;
       scrollRef.current.scrollBy({
         left: dir === 'left' ? -scrollValue : scrollValue,
         behavior: 'smooth',
@@ -59,15 +59,32 @@ export default function StudentPortfolioCarousel() {
   return (
     <section className="py-6 bg-white relative">
       <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-2xl sm:text-3xl font-bold text-center mb-10 text-[#652f8e]">
-          Our Student Works Portfolio
-        </h2>
+        <div className="flex justify-between items-center mb-6">
+          <h2 className="text-2xl sm:text-3xl font-bold text-[#652f8e] text-center w-full">
+            Our Student Works Portfolio
+          </h2>
+        </div>
 
+        {/* Arrows for Desktop */}
+        <div className="hidden md:flex justify-end gap-2 mb-4">
+          <button
+            onClick={() => scroll('left')}
+            className="bg-[#652f8e] text-white p-2 rounded-full hover:bg-[#501d6a]"
+          >
+            <ChevronLeft size={20} />
+          </button>
+          <button
+            onClick={() => scroll('right')}
+            className="bg-[#652f8e] text-white p-2 rounded-full hover:bg-[#501d6a]"
+          >
+            <ChevronRight size={20} />
+          </button>
+        </div>
 
-        {/* Scrollable Container */}
+        {/* Scrollable Cards */}
         <div
           ref={scrollRef}
-          className="flex gap-4 overflow-x-auto no-scrollbar scroll-smooth snap-x snap-mandatory px-4 sm:px-6"
+          className="flex gap-4 overflow-x-auto no-scrollbar scroll-smooth snap-x snap-mandatory px-1 sm:px-4"
         >
           {students.map((student, index) => (
             <div
@@ -82,12 +99,12 @@ export default function StudentPortfolioCarousel() {
                 className="w-full h-40 object-cover"
               />
               <div className="p-3">
-                <h3 className="font-bold text-md mb-1">Student Name : {student.name}</h3>
-                <p className="text-xs mb-3">Software : {student.software}</p>
+                <h3 className="font-bold text-md mb-1">Student Name: {student.name}</h3>
+                <p className="text-xs mb-3">Software: {student.software}</p>
 
                 <a
                   href={student.portfolioUrl}
-                  className="inline-block bg-white text-[#652f8e] text-xs font-semibold px-3 py-1 rounded-full  transition"
+                  className="inline-block bg-white text-[#652f8e] text-xs font-semibold px-3 py-1 rounded-full transition"
                 >
                   <Eye className="inline w-4 h-4 mr-1" /> Portfolio
                 </a>

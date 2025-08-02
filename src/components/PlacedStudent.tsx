@@ -23,7 +23,7 @@ export default function PlacedStudentsGallery() {
 
     const isMobile = window.innerWidth < 768;
 
-    let scrollAmount = 1;
+    const scrollAmount = 1;
     const scrollFn = () => {
       if (!container) return;
       if (isMobile) {

@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef, useState, useEffect } from 'react';
+import { useRef, useState } from 'react';
 import { ChevronLeft, ChevronRight, PlayCircle } from 'lucide-react';
 import { ArrowDownToLine } from 'lucide-react';
 
