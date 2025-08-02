@@ -12,6 +12,7 @@ import WorkPortfolio from '@/components/WorkPortfolio';
 import StudentPortfolio from '@/components/StudentPortfolio';
 import Testimonial from '@/components/Testimonial';
 import CallNow from '@/components/CallNow';
+import EnrollSection from '@/components/EnrollSection';
 
 export default function Home() {
   return (
@@ -21,12 +22,13 @@ export default function Home() {
       <section className="mt-4 ">
         <Hero />
         <CourseSlider />
-        <CompanyLogos />
+        <EnrollSection />
+        <StudentPortfolio />
         <CategoryCards />
-        <About />
+        <CompanyLogos />
         <WorkPortfolio />
         <PlacedStudents />
-        <StudentPortfolio />
+        <About />
         <Testimonial />
         <AboutHighlights />
         <CallNow />

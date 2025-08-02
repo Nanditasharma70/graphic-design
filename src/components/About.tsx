@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function AboutSection() {
   return (
-    <section className="py-20 bg-white dark:bg-gray-950">
+    <section className="py-6 bg-white dark:bg-gray-950">
       <div className="max-w-7xl mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           
@@ -31,12 +31,12 @@ export default function AboutSection() {
 
           {/* Right Content */}
           <div>
-            <span className="inline-block bg-purple-100 text-purple-700 text-sm font-semibold px-4 py-1 rounded-full mb-4">
+            <span className="inline-block bg-purple-100 border-1 border-[#652f8e] text-[#652f8e] text-sm font-semibold px-4 py-1 rounded-full mb-4">
               About Us
             </span>
             
             <h2 className="text-4xl font-extrabold text-gray-900 dark:text-white leading-snug mb-6">
-              Building Creative Careers Since <span className="text-purple-600">2018</span>
+              Building Creative Careers Since <span className="text-[#652f8e]">2018</span>
             </h2>
 
             <p className="text-base text-gray-700 dark:text-gray-300 mb-5 leading-relaxed">
@@ -49,22 +49,22 @@ export default function AboutSection() {
 
             <ul className="space-y-3 text-base text-gray-700 dark:text-gray-300 mb-6">
               <li className="flex items-start">
-                <span className="text-purple-600 mr-3">✔</span>
+                <span className="text-[#652f8e] mr-3">✔</span>
                 Worked with Indian Oil, GAIL, ONGC, NHPC, Income Tax, and PNB
               </li>
               <li className="flex items-start">
-                <span className="text-purple-600 mr-3">✔</span>
+                <span className="text-[#652f8e] mr-3">✔</span>
                 Designed campaigns for Maruti, Campus Shoes, Delhi Metro, IRCTC
               </li>
               <li className="flex items-start">
-                <span className="text-purple-600 mr-3">✔</span>
+                <span className="text-[#652f8e] mr-3">✔</span>
                 12+ Years of Excellence in Design & Education
               </li>
             </ul>
 
             <a
               href="#"
-              className="inline-block bg-purple-600 text-white px-6 py-3 rounded-full text-sm font-semibold shadow hover:bg-purple-700 transition duration-300"
+              className="inline-block bg-[#652f8e] text-white px-6 py-3 rounded-full text-sm font-semibold shadow hover:bg-[#652f8e] transition duration-300"
             >
               Learn More
             </a>

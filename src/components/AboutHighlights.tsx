@@ -36,7 +36,7 @@ export default function AboutHighlights() {
   return (
     <section className="py-16 bg-gray-50">
       <div className="max-w-5xl mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-purple-700 mb-10">
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-[#652f8e] mb-10">
           Why Choose Our Institute?
         </h2>
 
@@ -44,7 +44,7 @@ export default function AboutHighlights() {
           {highlights.map((item, index) => (
             <div
               key={index}
-              className="bg-white border border-purple-100 rounded-xl shadow-sm"
+              className="bg-white border border-purple-200 rounded-xl shadow-sm"
             >
               <button
                 onClick={() => toggleAccordion(index)}
@@ -52,9 +52,9 @@ export default function AboutHighlights() {
               >
                 <span>{item.title}</span>
                 {activeIndex === index ? (
-                  <Minus className="w-5 h-5" />
+                  <Minus className="w-5 h-5 text-[#652f8e]" />
                 ) : (
-                  <Plus className="w-5 h-5" />
+                  <Plus className="w-5 h-5 text-[#652f8e]" />
                 )}
               </button>
 

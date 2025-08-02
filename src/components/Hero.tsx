@@ -16,8 +16,8 @@ export default function Hero() {
         className="max-w-6xl mx-auto flex flex-col items-center text-center"
       >
         {/* Heading */}
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900">
-          Be Professional <span className="text-purple-600"> make career</span><br />
+        <h1 className="text-4xl md:text-5xl font-bold text-black">
+          Be Professional <span className="text-[#652f8e]"> make career</span><br />
           in corporate Industry
         </h1>
         <p className="text-gray-600 mt-4 text-lg max-w-2xl">
@@ -29,7 +29,7 @@ export default function Hero() {
         <Link href="/enroll-form">
         <motion.button
           whileHover={{ scale: 1.05 }}
-          className="mt-6 inline-flex items-center px-6 py-3 bg-black text-white rounded-full hover:bg-gray-800 transition"
+          className="mt-6 inline-flex items-center px-6 py-3 bg-black text-white  rounded-full transition"
         >
           Get Free Career Counselling <ArrowRight className="ml-2 w-4 h-4" />
         </motion.button>

@@ -42,18 +42,22 @@ const responsive = {
   superLargeDesktop: {
     breakpoint: { max: 4000, min: 1536 },
     items: 4,
+    partialVisibilityGutter: 40,
   },
   desktop: {
     breakpoint: { max: 1536, min: 1024 },
     items: 3,
+    partialVisibilityGutter: 30,
   },
   tablet: {
     breakpoint: { max: 1024, min: 640 },
     items: 2,
+    partialVisibilityGutter: 20,
   },
   mobile: {
     breakpoint: { max: 640, min: 0 },
     items: 1,
+    partialVisibilityGutter: 60, // Left & right peek
   },
 };
 
@@ -71,28 +75,30 @@ export default function CourseSlider() {
           autoPlay={true}
           autoPlaySpeed={3000}
           keyBoardControl={true}
-          containerClass="carousel-container"
+          partialVisible={true}
+          arrows={false}
+          showDots={false}
           itemClass="px-2"
-          removeArrowOnDeviceType={['tablet', 'mobile']}
+          containerClass="pb-4"
         >
           {courses.map((course, index) => (
             <div
               key={index}
-              className="bg-purple-600 rounded-xl pb-4 shadow-lg hover:shadow-xl transition duration-300"
+              className="bg-[#652f8e] rounded-xl pb-4 shadow-lg hover:shadow-xl transition duration-300"
             >
               <Image
                 src={course.image}
                 alt={course.title}
                 width={400}
                 height={300}
-                className="rounded-lg mb-4"
+                className="rounded-t-xl object-cover"
               />
-              <h3 className="ms-4 text-white font-bold text-lg leading-tight">
+              <h3 className="ms-4 text-white font-bold text-lg leading-tight mt-3">
                 {course.title}
                 <br />
                 <span className="text-sm font-medium">{course.subtitle}</span>
               </h3>
-              <button className="mt-4 ms-4 text-sm bg-white text-purple-700 px-4 py-2 rounded-full flex items-center gap-2 hover:bg-purple-100 transition">
+              <button className="mt-4 ms-4 text-sm bg-white text-[#652f8e] px-4 py-2 rounded-full flex items-center gap-2 hover:bg-purple-100 transition">
                 Download Brochure <Download size={14} />
               </button>
             </div>

@@ -1,95 +1,118 @@
 'use client';
 
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, PlayCircle } from 'lucide-react';
-import Image from 'next/image';
+import { ArrowDownToLine } from 'lucide-react';
+
 
 const slides = [
-    { src: '/course1.jpg', isVideo: false },
-    { src: '/course2.jpg', isVideo: true },
-    { src: '/course3.jpg', isVideo: false },
-    { src: '/course1.jpg', isVideo: false },
-    { src: '/course2.jpg', isVideo: true },
-    { src: '/course3.jpg', isVideo: false },
-    { src: '/course1.jpg', isVideo: false },
-    { src: '/course2.jpg', isVideo: true },
-    { src: '/course3.jpg', isVideo: false },
+  { src: '/v2-home-video.mp4' },
+  { src: '/v2-home-video.mp4' },
+  { src: '/v2-home-video.mp4' },
+  { src: '/v2-home-video.mp4' },
+  { src: '/v2-home-video.mp4' },
+  { src: '/v2-home-video.mp4' },
 ];
 
 export default function CreativeCarousel() {
-    const scrollRef = useRef<HTMLDivElement>(null);
-    const [visibleStart, setVisibleStart] = useState(0);
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [centerIndex, setCenterIndex] = useState(1);
 
-    const cardWidth = 384 + 24; // w-96 (384px) + gap (24px)
+  const handleScroll = () => {
+    if (!scrollRef.current) return;
+    const container = scrollRef.current;
+    const scrollLeft = container.scrollLeft;
 
-    const scroll = (dir: 'left' | 'right') => {
-        if (!scrollRef.current) return;
+    const cardWidth = window.innerWidth < 768 ? window.innerWidth * 0.8 + 16 : 384 + 24; // mobile vs desktop
+    const visibleCards = 3;
+    const centerOffset = Math.floor(visibleCards / 2);
 
-        const scrollBy = cardWidth * 3;
-        const container = scrollRef.current;
+    const index = Math.round(scrollLeft / cardWidth);
+    setCenterIndex(index + centerOffset);
+  };
 
-        container.scrollBy({
-            left: dir === 'left' ? -scrollBy : scrollBy,
-            behavior: 'smooth',
-        });
+  const scroll = (dir: 'left' | 'right') => {
+    if (!scrollRef.current) return;
+    const cardWidth = window.innerWidth < 768 ? window.innerWidth * 0.8 + 16 : 384 + 24;
+    scrollRef.current.scrollBy({
+      left: dir === 'left' ? -cardWidth : cardWidth,
+      behavior: 'smooth',
+    });
+  };
 
-        // Update index for center card (optional for animation)
-        const next = visibleStart + (dir === 'left' ? -3 : 3);
-        setVisibleStart(Math.max(0, Math.min(slides.length - 3, next)));
-    };
+  return (
+    <section className="bg-purple-100 py-10 text-[#652f8e] relative">
+      <div className="max-w-7xl mx-auto px-4">
+        {/* Header */}
+        <div className="flex justify-between items-center mb-6 relative">
+          <h2 className="text-2xl md:text-3xl font-semibold text-center w-full">
+            Student — <span className="font-bold">work showcase</span>
+          </h2>
 
-    return (
-        <section className="bg-purple-200 py-10 text-purple-700 relative">
-            <div className="max-w-7xl mx-auto px-4">
-                {/* Header */}
-                <div className="flex justify-between items-center mb-6">
-                    <h2 className="text-2xl md:text-3xl font-semibold text-center w-full">
-                        Empowering Creativity — <span className="font-bold">Real Skills, Real Portfolios</span>
+          {/* Chevron Buttons (Only on Desktop) */}
+          <div className="absolute right-4 top-1 md:flex gap-2 hidden">
+            <button
+              onClick={() => scroll('left')}
+              className="bg-[#652f8e] hover:bg-[#501d6a] text-white p-2 rounded-full"
+            >
+              <ChevronLeft className="w-5 h-5" />
+            </button>
+            <button
+              onClick={() => scroll('right')}
+              className="bg-[#652f8e] hover:bg-[#501d6a] text-white p-2 rounded-full"
+            >
+              <ChevronRight className="w-5 h-5" />
+            </button>
+          </div>
+        </div>
 
-                    </h2>
+        {/* Carousel */}
+        <div
+          ref={scrollRef}
+          onScroll={handleScroll}
+          className="flex overflow-x-auto gap-6 px-4 scroll-smooth no-scrollbar snap-x snap-mandatory"
+        >
+          {slides.map((item, idx) => (
+            <div
+              key={idx}
+              className={`
+                relative flex-shrink-0 snap-center overflow-hidden bg-black group
+                rounded-2xl h-80
+                w-[80%] sm:w-96
+                mx-auto sm:mx-0
 
-                    {/* Right top corner scroll buttons */}
-                    <div className="absolute right-4 top-4 flex gap-2">
-                        <button
-                            onClick={() => scroll('left')}
-                            className="bg-purple-700 hover:bg-purple-800 text-white p-2 rounded-full"
-                        >
-                            <ChevronLeft className="w-5 h-5" />
-                        </button>
-                        <button
-                            onClick={() => scroll('right')}
-                            className="bg-purple-700 hover:bg-purple-800 text-white p-2 rounded-full"
-                        >
-                            <ChevronRight className="w-5 h-5" />
-                        </button>
-                    </div>
+                
+              `}
+            >
+              <video
+                src={item.src}
+                className="w-full h-full object-cover"
+                autoPlay
+                muted
+                loop
+                playsInline
+              />
+              {/* Show video icon only for center card */}
+              {idx === centerIndex && (
+                <div className="absolute inset-0 flex items-center justify-center bg-black/30 transition">
+                  <PlayCircle className="w-16 h-16 text-white opacity-90 hover:scale-105 transition-transform" />
                 </div>
-
-                {/* Carousel */}
-                <div
-                    ref={scrollRef}
-                    className="flex overflow-x-auto gap-6 px-2 scroll-smooth no-scrollbar"
-                >
-                    {slides.map((item, idx) => (
-                        <div
-                            key={idx}
-                            className="flex-shrink-0 w-96 h-96 rounded-2xl overflow-hidden relative group"
-                        >
-                            <Image
-                                src={item.src}
-                                alt={`Slide ${idx}`}
-                                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                            />
-                            {/* Show video icon only for center card */}
-                            {item.isVideo && idx === visibleStart + 1 && (
-                                <div className="absolute inset-0 flex items-center justify-center bg-black/30 transition">
-                                    <PlayCircle className="w-18 h-18 text-white  opacity-90 hover:scale-105 transition-transform" />
-                                </div>
-                            )}
-                        </div>
-                    ))}
-                </div>
+              )}
             </div>
-        </section>
-    );
+          ))}
+        </div>
+      </div>
+      <div className="flex  justify-center ">
+  <a
+    href="/brochure.pdf" 
+    download
+    className="inline-flex items-center gap-2 mt-6 px-6 py-2 bg-[#652f8e] text-white rounded-full font-medium hover:bg-[#501d6a] transition"
+  >
+    Download Brochure
+    <ArrowDownToLine size={18} />
+  </a>
+</div>
+
+    </section>
+  );
 }

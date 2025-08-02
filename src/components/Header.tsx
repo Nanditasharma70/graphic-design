@@ -27,7 +27,7 @@ export default function Header() {
         {/* Left Side: Logo */}
         <Link
           href="/"
-          className="text-2xl font-extrabold text-purple-700 tracking-wide flex flex-col"
+          className="text-2xl font-extrabold text-[#652f8e] tracking-wide flex flex-col"
         >
           <span className="font-black">De<span>sign</span>ifiy</span>
           <p className="ms-6 text-[8px] text-gray-500">Digital Media Pvt. Ltd</p>
@@ -45,11 +45,11 @@ export default function Header() {
 
         {/* Right: Menu Links + Sign In (Desktop) */}
         <div className="hidden md:flex items-center gap-6">
-          <Link href="#about" className="text-gray-700 hover:text-purple-600">About</Link>
-          <Link href="#courses" className="text-gray-700 hover:text-purple-600">Courses</Link>
-          <Link href="#contact" className="text-gray-700 hover:text-purple-600">Contact</Link>
+          <Link href="#about" className="text-gray-700 hover:text-[#652f8e]">About</Link>
+          <Link href="#courses" className="text-gray-700 hover:text-[#652f8e]">Courses</Link>
+          <Link href="#contact" className="text-gray-700 hover:text-[#652f8e]">Contact</Link>
 
-          <button className="bg-purple-600 text-white px-5 py-2 rounded-full shadow-md hover:bg-purple-700 transition">
+          <button className="bg-[#652f8e] text-white px-5 py-2 rounded-full shadow-md hover:bg-[#652f8e] transition">
             Sign In
           </button>
         </div>
@@ -61,7 +61,7 @@ export default function Header() {
             <Search className="w-5 h-5 text-gray-600" />
           </button>
          
-           <button className="mt-4 w-full bg-purple-600 text-white px-4 py-2 rounded-full shadow hover:bg-purple-700">
+           <button className="mt-4 w-full bg-[#652f8e] text-white px-4 py-2 rounded-full shadow hover:bg-[#652f8e]">
           Sign In
         </button>
         </div>
@@ -73,9 +73,9 @@ export default function Header() {
           menuOpen ? 'max-h-96 opacity-100' : 'max-h-0 overflow-hidden opacity-0'
         }`}
       >
-        <Link href="#about" className="block py-2 text-gray-700 hover:text-purple-600">About</Link>
-        <Link href="#courses" className="block py-2 text-gray-700 hover:text-purple-600">Courses</Link>
-        <Link href="#contact" className="block py-2 text-gray-700 hover:text-purple-600">Contact</Link>
+        <Link href="#about" className="block py-2 text-gray-700 hover:text-[#652f8e]">About</Link>
+        <Link href="#courses" className="block py-2 text-gray-700 hover:text-[#652f8e]">Courses</Link>
+        <Link href="#contact" className="block py-2 text-gray-700 hover:text-[#652f8e]">Contact</Link>
 
        
       </div>

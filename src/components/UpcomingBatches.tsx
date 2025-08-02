@@ -93,7 +93,7 @@ export default function UpcomingBatches() {
     <section className="py-16 bg-gradient-to-b from-white to-purple-50">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-10">
-          <h2 className="text-3xl font-extrabold text-purple-600"> Upcoming Batches</h2>
+          <h2 className="text-3xl font-extrabold text-[#652f8e]"> Upcoming Batches</h2>
           <p className="text-gray-500 mt-2">Choose the course and join our next batch</p>
         </div>
 
@@ -104,8 +104,8 @@ export default function UpcomingBatches() {
               onClick={() => setActiveTab(tab)}
               className={`px-5 py-2 rounded-full text-sm font-medium transition border ${
                 activeTab === tab
-                  ? 'bg-purple-600 text-white border-purple-600 shadow'
-                  : 'bg-white text-gray-700 border-gray-300 hover:bg-purple-50 hover:text-purple-600'
+                  ? 'bg-[#652f8e] text-white border-[#652f8e] shadow'
+                  : 'bg-white text-gray-700 border-gray-300 hover:bg-purple-50 hover:text-[#652f8e]'
               }`}
             >
               {tab}
@@ -119,10 +119,10 @@ export default function UpcomingBatches() {
               key={idx}
               className="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm hover:shadow-lg transition duration-300 relative overflow-hidden"
             >
-              <span className="absolute top-4 right-4 text-xs font-semibold bg-purple-100 text-purple-700 px-3 py-1 rounded-full">
+              <span className="absolute top-2 right-4 text-xs font-semibold bg-[#652f8e] text-white px-3 py-1 rounded-full">
                 {batch.day}
               </span>
-              <h3 className="text-lg font-bold text-purple-700 mb-3">{batch.title}</h3>
+              <h3 className="text-lg font-bold text-[#652f8e] mb-3">{batch.title}</h3>
 
               <div className="space-y-2 text-sm text-gray-700">
                 <p>
@@ -136,7 +136,7 @@ export default function UpcomingBatches() {
                 </p>
               </div>
 
-              <button className="mt-5 w-full bg-purple-600 text-white py-2 rounded-full text-sm font-semibold hover:bg-purple-700 transition">
+              <button className="mt-5 w-full bg-[#652f8e] text-white py-2 rounded-full text-sm font-semibold hover:bg-[#652f8e] transition">
                 Enroll Now →
               </button>
             </div>
