@@ -10,7 +10,7 @@ const students = [
   { name: 'Amit', img: '/Amit.webp' },
   { name: 'Arjun', img: '/arjun.webp' },
   { name: 'Bhavna', img: '/Bhavna.webp' },
-  { name: 'Deepika', img: '/Deepika.webp' },
+  { name: 'Deepika', img: '/deepika.webp' },
   { name: 'Diksha', img: '/diksha.webp' },
    { name: 'Gautam', img: '/gautam.webp' },
     { name: 'Karan', img: '/karan.webp' },

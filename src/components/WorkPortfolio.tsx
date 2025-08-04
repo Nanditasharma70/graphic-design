@@ -32,7 +32,7 @@ const students = [
   {
     name: 'Mansi ',
     software: 'After Effects, Figma, Photoshop',
-    image: '/Mansi.webp',
+    image: '/mansi.webp',
     portfolioUrl: '#',
   },
   {
