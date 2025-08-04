@@ -29,13 +29,14 @@ export default function Header() {
         <Link
           href="/"
         >
-          <Image
-            src="/logo.png"
-            width={100}
-            height={100}
-            alt="logo"
-            className="w-26 h-auto object-contain"
-          />
+        <Image
+  src="/logo.png"
+  alt="logo"
+  width={200}
+  height={80}
+  className="w-46 md:w-30 md:ms-5 -ms-10  h-auto object-contain"
+/>
+
 
 
         </Link>

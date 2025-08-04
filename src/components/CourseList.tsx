@@ -50,7 +50,7 @@ export default function CourseCardSlider() {
     {courses.map((course, index) => (
       <div
         key={index}
-        className="snap-start flex-shrink-0 w-[266px] h-[351px] bg-purple-500 rounded-xl shadow-md relative"
+        className="snap-start flex-shrink-0 w-[266px] h-[400px] bg-purple-500 rounded-xl shadow-md relative"
       >
        <div className="relative w-full h-full rounded-xl overflow-hidden">
   <Image
