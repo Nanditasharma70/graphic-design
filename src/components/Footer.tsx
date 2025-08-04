@@ -18,7 +18,7 @@ export default function Footer() {
               width={100}
               height={100}
               alt="logo"
-              className="w-26 h-auto object-contain"
+              className="w-46 md:w-36 strokeWidth={5}  h-auto object-contain"
             />
 
 
