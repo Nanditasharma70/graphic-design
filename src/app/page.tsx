@@ -2,7 +2,7 @@ import Header from '@/components/Header';
 import Hero from '../components/Hero';
 import About from '../components/About';
 import FormWithOTP from '../components/FormWithOTP';
-import CategoryCards from '../components/UpcomingBatches';
+import UpcomingBatches from '../components/UpcomingBatches';
 import CompanyLogos from '../components/CompanyLogos';
 import Footer from '@/components/Footer';
 import CourseSlider from '../components/CourseList';
@@ -25,13 +25,13 @@ export default function Home() {
         <CourseSlider />
         <EnrollSection />
         <StudentPortfolio />
-        <CategoryCards />
         <CompanyLogos />
         <WorkPortfolio />
         <PlacedStudents />
-        <About />
+        <UpcomingBatches />
         <Testimonial />
-        <StudentReviews/>
+        <StudentReviews />
+        <About />
         <AboutHighlights />
         <CallNow />
         <Footer />

@@ -60,7 +60,7 @@ export default function StudentPortfolioCarousel() {
     <section className="py-6 bg-white relative">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center mb-6">
-          <h2 className="text-2xl sm:text-3xl font-bold text-[#652f8e] text-center w-full">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 text-center w-full">
             Our Student Works Portfolio
           </h2>
         </div>
@@ -96,7 +96,7 @@ export default function StudentPortfolioCarousel() {
                 alt={student.name}
                 width={300}
                 height={180}
-                className="w-full h-76 object-cover"
+                className="w-full p-4 h-76 object-cover"
               />
               <div className="p-3">
                 <h3 className="font-bold text-md mb-1">Student Name: {student.name}</h3>

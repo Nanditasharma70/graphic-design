@@ -6,11 +6,11 @@ import { ArrowDownToLine } from 'lucide-react';
 
 const slides = [
   { src: '/vivek-video.mp4' },
-  { src: '/video.mp4' },
+  // { src: '/video.mp4' },
   { src: '/sumit.mp4' },
   { src: '/Adm.mp4' },
-   { src: '/vivek-video.mp4' },
-  { src: '/video.mp4' },
+  { src: '/vivek-video.mp4' },
+  // { src: '/video.mp4' },
   { src: '/sumit.mp4' },
   { src: '/Adm.mp4' },
 ];
@@ -67,16 +67,16 @@ export default function CreativeCarousel() {
   }, []);
 
   return (
-    <section className="bg-purple-100 py-10 text-[#652f8e] relative">
+    <section className="bg-white py-10 text-[#652f8e] relative">
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
         <div className="flex justify-between items-center mb-6 relative">
-          <h2 className="text-2xl md:text-3xl font-semibold text-center w-full">
-            Student — <span className="font-bold">work showcase</span>
+          <h2 className="text-2xl text-gray-800 md:text-3xl font-semibold text-center w-full">
+            Student Feedback
           </h2>
 
           {/* Chevron Buttons (Only on Desktop) */}
-          <div className="absolute right-4 top-1 md:flex gap-2 hidden">
+          {/* <div className="absolute right-4 top-1 md:flex gap-2 hidden">
             <button
               onClick={() => scroll('left')}
               className="bg-[#652f8e] hover:bg-[#501d6a] text-white p-2 rounded-full"
@@ -89,44 +89,44 @@ export default function CreativeCarousel() {
             >
               <ChevronRight className="w-5 h-5" />
             </button>
-          </div>
+          </div> */}
         </div>
 
         {/* Carousel */}
         <div
           ref={scrollRef}
           onScroll={handleScroll}
-          className="flex overflow-x-auto gap-6 px-4 scroll-smooth no-scrollbar snap-x snap-mandatory"
+          className="flex overflow-x-auto gap-2 px-4 scroll-smooth no-scrollbar snap-x snap-mandatory"
         >
           {slides.map((item, idx) => (
             <div
               key={idx}
               className={`
                 relative flex-shrink-0 snap-center overflow-hidden bg-black group
-                rounded-2xl h-80
-                w-[80%] sm:w-96
+                rounded-2xl h-80 sm:h-76
+                w-[96%] sm:w-[40%]
                 mx-auto sm:mx-0
               `}
             >
-             <video
-          key={idx}
-          ref={(el) => {
-            if (el) videoRefs.current[idx] = el;
-          }}
-          src={item.src}
-          className="w-full h-full object-cover"
-          controls={idx === playingIndex}
-          muted
-        />
+              <video
+                key={idx}
+                ref={(el) => {
+                  if (el) videoRefs.current[idx] = el;
+                }}
+                src={item.src}
+                className="w-full h-full object-cover"
+                controls={idx === playingIndex}
+                muted
+              />
 
-             {idx === centerIndex && playingIndex !== idx && (
-  <button
-    onClick={() => handlePlayClick(idx)}
-    className="absolute inset-0 flex items-center justify-center bg-black/30 transition"
-  >
-    <PlayCircle className="w-16 h-16 text-white opacity-90 hover:scale-105 transition-transform" />
-  </button>
-)}
+              {idx === centerIndex && playingIndex !== idx && (
+                <button
+                  onClick={() => handlePlayClick(idx)}
+                  className="absolute inset-0 flex items-center justify-center bg-black/30 transition"
+                >
+                  <PlayCircle className="w-16 h-16 text-white opacity-90 hover:scale-105 transition-transform" />
+                </button>
+              )}
 
             </div>
           ))}
@@ -138,9 +138,9 @@ export default function CreativeCarousel() {
         <a
           href="/brochure.pdf"
           download
-          className="inline-flex items-center gap-2 mt-6 px-6 py-2 bg-[#652f8e] text-white rounded-full font-medium hover:bg-[#501d6a] transition"
+          className="inline-flex items-center gap-2 mt-6 px-4 py-2 bg-blue-500 text-white rounded-xl font-medium  transition"
         >
-          Download Brochure
+          Download Course Brochure
           <ArrowDownToLine size={18} />
         </a>
       </div>

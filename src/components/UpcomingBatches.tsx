@@ -90,7 +90,7 @@ export default function UpcomingBatches() {
   const [activeTab, setActiveTab] = useState<CourseName>('Graphic Designing');
 
   return (
-    <section className="py-16 bg-gradient-to-b from-white to-purple-50">
+    <section className="py-10 bg-gradient-to-b from-white to-purple-50">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-10">
           <h2 className="text-3xl font-extrabold text-[#652f8e]"> Upcoming Batches</h2>

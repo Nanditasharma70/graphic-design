@@ -58,12 +58,6 @@ export default function EnrollSection() {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
         {/* Left: Form & Offer */}
         <div className="flex flex-col items-center md:items-center">
-          <div className="text-center md:text-left mb-6">
-            <p className="mt-3 text-gray-600 text-base font-medium">
-              Get <span className="text-pink-600 font-bold">50% Off</span> on Video Editing<br />
-              If you Enroll for <span className="text-pink-600 font-bold">Graphic Designing</span>
-            </p>
-          </div>
 
           <div className="bg-[#652f8e] text-white rounded-2xl p-6 shadow-md w-full max-w-md">
             <h3 className="text-lg font-bold text-center mb-4">BOOK FREE DEMO SESSION</h3>
@@ -131,7 +125,7 @@ export default function EnrollSection() {
         </div>
 
         {/* Right: Certification Info */}
-        <div className="flex flex-col items-center md:items-start text-center md:text-left">
+<div className="hidden md:flex flex-col items-center md:items-start text-center md:text-left">
           <h3 className="text-2xl font-bold text-[#652f8e] mb-2">
             Become a professional <span className="font-light">and Certified</span>
           </h3>

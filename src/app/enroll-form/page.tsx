@@ -1,7 +1,10 @@
 'use client';
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 export default function EnrollForm() {
+  const router = useRouter();
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -12,16 +15,25 @@ export default function EnrollForm() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // TODO: Send form data to your backend API
     alert('Form submitted successfully!');
   };
 
   return (
-    <section className="bg-gray-100 py-12 px-4" id="enroll">
-      <div className="max-w-3xl mx-auto bg-white p-8 rounded-xl shadow-lg">
+    <section className="py-12 px-4" id="enroll">
+      <div className="max-w-3xl mx-auto bg-white p-8 rounded-xl shadow-lg relative">
+        
+        {/* Back Button */}
+        <button
+          onClick={() => router.back()}
+          className="absolute -top-4 left-5 text-4xl  text-gray-800 px-4 py-2  mb-4 transition"
+        >
+          ←
+        </button>
+
         <h2 className="text-3xl font-bold text-purple-700 mb-6 text-center">
           Enroll Now
         </h2>
+
         <form onSubmit={handleSubmit} className="space-y-5">
           <div>
             <label className="block text-sm font-semibold mb-1">Full Name</label>

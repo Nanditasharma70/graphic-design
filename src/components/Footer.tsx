@@ -1,5 +1,7 @@
 'use client';
 import { Facebook, Instagram, Linkedin, Mail } from 'lucide-react';
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Footer() {
   return (
@@ -8,8 +10,20 @@ export default function Footer() {
 
         {/* Branding */}
         <div>
-          <h3 className="text-2xl font-bold text-[#652f8e] mb-2">Designifiy</h3>
-          <p className="text-sm text-gray-400">
+          <Link
+            href="/"
+          >
+            <Image
+              src="/logo.png"
+              width={100}
+              height={100}
+              alt="logo"
+              className="w-26 h-auto object-contain"
+            />
+
+
+          </Link>     
+               <p className="text-sm text-gray-400">
             Empowering creative careers in digital media, graphic design, marketing & more since 2018.
           </p>
         </div>

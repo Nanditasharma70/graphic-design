@@ -1,110 +1,94 @@
-'use client';
 
+'use client';
 import Image from 'next/image';
-import { Download } from 'lucide-react';
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
+import { ArrowDownToLine, Info } from 'lucide-react';
 
 const courses = [
   {
     title: 'Graphic Designing',
-    subtitle: 'Course',
-    image: '/course.jpg',
+    img: '/courses.jpg',
+    brochure: '/brochure.pdf',
   },
   {
     title: 'Video Editing',
-    subtitle: 'Course',
-    image: '/course.jpg',
+    img: '/courses.jpg',
+    brochure: '/video-brochure.pdf',
   },
   {
     title: 'Digital Marketing',
-    subtitle: 'Course',
-    image: '/course.jpg',
+    img: '/courses.jpg',
+    brochure: '/marketing-brochure.pdf',
   },
   {
     title: 'UI/UX Designing',
-    subtitle: 'Course',
-    image: '/course.jpg',
+    img: '/courses.jpg',
+    brochure: '/uiux-brochure.pdf',
   },
   {
-    title: 'Animation & Motion Graphics',
-    subtitle: 'Course',
-    image: '/course.jpg',
+    title: 'Video Editing',
+    img: '/courses.jpg',
+    brochure: '/video-brochure.pdf',
   },
   {
-    title: 'Advertising and Branding',
-    subtitle: 'Course',
-    image: '/course.jpg',
+    title: 'Digital Marketing',
+    img: '/courses.jpg',
+    brochure: '/marketing-brochure.pdf',
+  },
+  {
+    title: 'UI/UX Designing',
+    img: '/courses.jpg',
+    brochure: '/uiux-brochure.pdf',
   },
 ];
 
-const responsive = {
-  superLargeDesktop: {
-    breakpoint: { max: 4000, min: 1536 },
-    items: 4,
-    partialVisibilityGutter: 40,
-  },
-  desktop: {
-    breakpoint: { max: 1536, min: 1024 },
-    items: 3,
-    partialVisibilityGutter: 30,
-  },
-  tablet: {
-    breakpoint: { max: 1024, min: 640 },
-    items: 2,
-    partialVisibilityGutter: 20,
-  },
-  mobile: {
-    breakpoint: { max: 640, min: 0 },
-    items: 1,
-    partialVisibilityGutter: 60, // Left & right peek
-  },
-};
-
-export default function CourseSlider() {
+export default function CourseCardSlider() {
   return (
-    <section className="py-6 bg-white">
-      <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 text-gray-800">
-          Select Your Course
-        </h2>
+   <section className="py-6 px-4 bg-white">
+  <h2 className="text-center text-2xl font-semibold mb-6">Select Your Course</h2>
 
-        <Carousel
-          responsive={responsive}
-          infinite={true}
-          autoPlay={true}
-          autoPlaySpeed={3000}
-          keyBoardControl={true}
-          partialVisible={true}
-          arrows={false}
-          showDots={false}
-          itemClass="px-2"
-          containerClass="pb-4"
-        >
-          {courses.map((course, index) => (
-            <div
-              key={index}
-              className="bg-[#652f8e] rounded-xl pb-4 shadow-lg hover:shadow-xl transition duration-300"
-            >
-              <Image
-                src={course.image}
-                alt={course.title}
-                width={400}
-                height={300}
-                className="rounded-t-xl object-cover"
-              />
-              <h3 className="ms-4 text-white font-bold text-lg leading-tight mt-3">
-                {course.title}
-                <br />
-                <span className="text-sm font-medium">{course.subtitle}</span>
-              </h3>
-              <button className="mt-4 ms-4 text-sm bg-white text-[#652f8e] px-4 py-2 rounded-full flex items-center gap-2 hover:bg-purple-100 transition">
-                Download Brochure <Download size={14} />
-              </button>
-            </div>
-          ))}
-        </Carousel>
+  <div className="flex overflow-x-auto gap-4 px-2 scroll-smooth snap-x snap-mandatory no-scrollbar">
+    {courses.map((course, index) => (
+      <div
+        key={index}
+        className="snap-start flex-shrink-0 w-[266px] h-[351px] bg-purple-500 rounded-xl shadow-md relative"
+      >
+       <div className="relative w-full h-full rounded-xl overflow-hidden">
+  <Image
+    src={course.img}
+    alt={course.title}
+    fill
+    className="object-cover"
+    sizes="(max-width: 768px) 100vw, 270px"
+  />
+
+  {/* Overlay Color Effect */}
+  <div className="absolute inset-0 bg-[#652f8e]/50 mix-blend-multiply transition duration-300 hover:bg-[#652f8e]/40" />
+</div>
+
+        {/* Overlay Text */}
+        <div className="absolute top-5 left-4 text-white leading-tight drop-shadow-md">
+          <div className="text-base">{course.title}</div>
+          <div className="text-xl font-bold">Course</div>
+        </div>
+
+        {/* Buttons */}
+        <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-xs">
+          <a
+            href={course.brochure}
+            download
+            className="text-[#652f8e] border border-[#652f8e] bg-white px-3 py-1 rounded-lg flex items-center gap-1 transition"
+          >
+            Download Brochure <ArrowDownToLine size={14} />
+          </a>
+
+          <button className="text-[#652f8e] bg-white rounded-full">
+            <Info size={20} />
+          </button>
+        </div>
       </div>
-    </section>
+    ))}
+  </div>
+</section>
+
   );
 }
