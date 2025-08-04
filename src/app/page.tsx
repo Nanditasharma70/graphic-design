@@ -13,6 +13,7 @@ import StudentPortfolio from '@/components/StudentPortfolio';
 import Testimonial from '@/components/Testimonial';
 import CallNow from '@/components/CallNow';
 import EnrollSection from '@/components/EnrollSection';
+import StudentReviews from '@/components/StudentReview';
 
 export default function Home() {
   return (
@@ -30,6 +31,7 @@ export default function Home() {
         <PlacedStudents />
         <About />
         <Testimonial />
+        <StudentReviews/>
         <AboutHighlights />
         <CallNow />
         <Footer />

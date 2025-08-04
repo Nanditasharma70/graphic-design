@@ -5,52 +5,34 @@ import { useEffect, useRef } from 'react';
 
 const teamMembers = [
   {
-    name: 'Priya Verma',
-    role: 'UI/UX Designer',
-    description: 'Expert in building clean, user-friendly designs that speak visually.',
-    image: '/s1.jpg',
+    name: 'Ankit KK',
+    role: 'Founder',
+    image: '/Ankit.webp',
   },
   {
-    name: 'Aman Sharma',
-    role: 'Digital Marketer',
-    description: 'Focused on lead generation, SEO, and building engaging campaigns.',
-    image: '/s2.jpg',
+    name: 'Sulekha',
+    role: 'Founder',
+       image: '/Sulekha.webp',
   },
   {
-    name: 'Neha Rawat',
-    role: 'VFX Artist',
-    description: 'Bringing cinematic effects and high-end video storytelling to life.',
-    image: '/s3.jpg',
+    name: 'Pooja',
+    role: 'Admin Deptt.',
+    image: '/Pooja.webp',
   },
   {
-    name: 'Rahul Joshi',
-    role: 'Content Strategist',
-    description: 'Crafting compelling content and stories for digital platforms.',
-    image: '/s4.jpg',
+    name: 'Ananya Mukhi',
+    role: 'HR.',
+ image: '/ananya.webp',
   },
    {
-    name: 'Priya Verma',
-    role: 'UI/UX Designer',
-    description: 'Expert in building clean, user-friendly designs that speak visually.',
-    image: '/s1.jpg',
+    name: 'Anjali',
+    role: 'SEO Expert',
+    image: '/Anjali.webp',
   },
   {
-    name: 'Aman Sharma',
-    role: 'Digital Marketer',
-    description: 'Focused on lead generation, SEO, and building engaging campaigns.',
-    image: '/s2.jpg',
-  },
-  {
-    name: 'Neha Rawat',
-    role: 'VFX Artist',
-    description: 'Bringing cinematic effects and high-end video storytelling to life.',
-    image: '/s3.jpg',
-  },
-  {
-    name: 'Rahul Joshi',
-    role: 'Content Strategist',
-    description: 'Crafting compelling content and stories for digital platforms.',
-    image: '/s4.jpg',
+    name: 'Aarti',
+    role: 'Sales Team',
+       image: '/Aarti.webp',
   },
 ];
 
@@ -79,7 +61,7 @@ export default function OurTeam() {
   }, []);
 
   return (
-    <section className="bg-white py-12">
+    <section className="bg-gray-100 py-10">
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="text-3xl text-[#652f8e] font-bold text-center mb-10">
           Meet Our Creative Team
@@ -104,10 +86,9 @@ export default function OurTeam() {
                 />
               </div>
 
-              <div className="bg-[#652f8e] p-5 text-white text-center rounded-b-2xl">
+              <div className="bg-white p-5 text-[#652f8e] text-center rounded-b-2xl">
                 <h3 className="text-xl font-semibold">{member.name}</h3>
                 <p className="text-sm italic mb-2">{member.role}</p>
-                <p className="text-sm opacity-90">{member.description}</p>
               </div>
             </div>
           ))}

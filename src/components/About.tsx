@@ -3,24 +3,24 @@ import Image from 'next/image';
 
 export default function AboutSection() {
   return (
-    <section className="py-6 bg-white dark:bg-gray-950">
+    <section className="py-6  bg-white dark:bg-gray-950">
       <div className="max-w-7xl mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           
           {/* Left Images */}
           <div className="relative flex justify-end">
-            <div className="w-3/4 rounded-xl overflow-hidden shadow-xl">
+            <div className="w-3/4 border-4 border-[#652f8e] bg-[#652f8e] p-2 rounded-xl overflow-hidden shadow-xl">
               <Image
-                src="/about1.jpg"
+                src="/Ankit.webp"
                 alt="Anshika Digital Training"
-                width={600}
-                height={400}
+                width={400}
+                height={300}
                 className="rounded-xl w-full object-cover"
               />
             </div>
-            <div className="absolute top-[55%] left-0 w-1/2 bg-white p-2 rounded-xl shadow-lg">
+            <div className="absolute top-[55%] left-0 w-1/2 border-4 border-[#652f8e]  bg-[#652f8e] p-2 rounded-xl shadow-lg">
               <Image
-                src="/about2.jpg"
+                src="/Sulekha.webp"
                 alt="Students in Class"
                 width={300}
                 height={200}
@@ -31,7 +31,7 @@ export default function AboutSection() {
 
           {/* Right Content */}
           <div>
-            <span className="inline-block bg-purple-100 border-1 border-[#652f8e] text-[#652f8e] text-sm font-semibold px-4 py-1 rounded-full mb-4">
+            <span className="inline-block bg-purple-100 border-1 border-[#652f8e] text-[#652f8e] text-sm font-semibold px-4 py-1 rounded-full mt-5 mb-4">
               About Us
             </span>
             

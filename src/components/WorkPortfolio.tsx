@@ -6,39 +6,39 @@ import { ChevronLeft, ChevronRight, Eye, Share2 } from 'lucide-react';
 
 const students = [
   {
-    name: 'Suraj Kumar',
+    name: 'Sunil Kumar',
     software: 'Photoshop, Illustrator, CorelDraw,',
-    image: '/s1.jpg',
+    image: '/Sunil.webp',
     portfolioUrl: '#',
   },
   {
     name: 'Raj Mehra',
     software: 'Photoshop, Illustrator, XD, After Effects',
-    image: '/s2.jpg',
+    image: '/Rajnish.webp',
     portfolioUrl: '#',
   },
   {
     name: 'Pooja Singh',
     software: 'CorelDraw, Photoshop, Illustrator',
-    image: '/s3.jpg',
+    image: '/Pooja.webp',
     portfolioUrl: '#',
   },
   {
-    name: 'Ankit Rana',
+    name: 'Aman ',
     software: 'Illustrator, After Effects, Premiere Pro',
-    image: '/s4.jpg',
+    image: '/Aman.webp',
     portfolioUrl: '#',
   },
   {
-    name: 'Rekha Sharma',
+    name: 'Mansi ',
     software: 'After Effects, Figma, Photoshop',
-    image: '/s5.jpg',
+    image: '/Mansi.webp',
     portfolioUrl: '#',
   },
   {
-    name: 'Mohit Rawat',
+    name: 'Hemant',
     software: 'Premiere Pro, XD, Illustrator',
-    image: '/s6.jpg',
+    image: '/Hemant.webp',
     portfolioUrl: '#',
   },
 ];
@@ -89,14 +89,14 @@ export default function StudentPortfolioCarousel() {
           {students.map((student, index) => (
             <div
               key={index}
-              className="snap-start flex-shrink-0 w-[90%] sm:w-[calc(50%-1rem)] md:w-[calc(33.333%-1rem)] bg-[#652f8e] text-white rounded-xl shadow-md overflow-hidden hover:scale-[1.02] transition"
+              className="snap-start flex-shrink-0 w-[90%] sm:w-[calc(50%-1rem)] md:w-[calc(28.333%-1rem)] bg-[#652f8e] text-white rounded-xl shadow-md overflow-hidden hover:scale-[1.02] transition"
             >
               <Image
                 src={student.image}
                 alt={student.name}
                 width={300}
                 height={180}
-                className="w-full h-40 object-cover"
+                className="w-full h-76 object-cover"
               />
               <div className="p-3">
                 <h3 className="font-bold text-md mb-1">Student Name: {student.name}</h3>

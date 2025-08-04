@@ -1,29 +1,33 @@
 'use client';
 
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, PlayCircle } from 'lucide-react';
 import { ArrowDownToLine } from 'lucide-react';
 
-
 const slides = [
-  { src: '/v2-home-video.mp4' },
-  { src: '/v2-home-video.mp4' },
-  { src: '/v2-home-video.mp4' },
-  { src: '/v2-home-video.mp4' },
-  { src: '/v2-home-video.mp4' },
-  { src: '/v2-home-video.mp4' },
+  { src: '/vivek-video.mp4' },
+  { src: '/video.mp4' },
+  { src: '/sumit.mp4' },
+  { src: '/Adm.mp4' },
+   { src: '/vivek-video.mp4' },
+  { src: '/video.mp4' },
+  { src: '/sumit.mp4' },
+  { src: '/Adm.mp4' },
 ];
 
 export default function CreativeCarousel() {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
   const [centerIndex, setCenterIndex] = useState(1);
+  const [playingIndex, setPlayingIndex] = useState<number | null>(null);
 
   const handleScroll = () => {
     if (!scrollRef.current) return;
     const container = scrollRef.current;
     const scrollLeft = container.scrollLeft;
 
-    const cardWidth = window.innerWidth < 768 ? window.innerWidth * 0.8 + 16 : 384 + 24; // mobile vs desktop
+    const cardWidth =
+      window.innerWidth < 768 ? window.innerWidth * 0.8 + 16 : 384 + 24;
     const visibleCards = 3;
     const centerOffset = Math.floor(visibleCards / 2);
 
@@ -33,12 +37,34 @@ export default function CreativeCarousel() {
 
   const scroll = (dir: 'left' | 'right') => {
     if (!scrollRef.current) return;
-    const cardWidth = window.innerWidth < 768 ? window.innerWidth * 0.8 + 16 : 384 + 24;
+    const cardWidth =
+      window.innerWidth < 768 ? window.innerWidth * 0.8 + 16 : 384 + 24;
     scrollRef.current.scrollBy({
       left: dir === 'left' ? -cardWidth : cardWidth,
       behavior: 'smooth',
     });
   };
+
+  const handlePlayClick = (index: number) => {
+    videoRefs.current.forEach((video, i) => {
+      if (video) {
+        if (i === index) {
+          video.muted = false;
+          video.play();
+          setPlayingIndex(index);
+        } else {
+          video.pause();
+        }
+      }
+    });
+  };
+
+  // Pause all videos on unmount
+  useEffect(() => {
+    return () => {
+      videoRefs.current.forEach((video) => video?.pause());
+    };
+  }, []);
 
   return (
     <section className="bg-purple-100 py-10 text-[#652f8e] relative">
@@ -80,39 +106,44 @@ export default function CreativeCarousel() {
                 rounded-2xl h-80
                 w-[80%] sm:w-96
                 mx-auto sm:mx-0
-
-                
               `}
             >
-              <video
-                src={item.src}
-                className="w-full h-full object-cover"
-                autoPlay
-                muted
-                loop
-                playsInline
-              />
-              {/* Show video icon only for center card */}
-              {idx === centerIndex && (
-                <div className="absolute inset-0 flex items-center justify-center bg-black/30 transition">
-                  <PlayCircle className="w-16 h-16 text-white opacity-90 hover:scale-105 transition-transform" />
-                </div>
-              )}
+             <video
+          key={idx}
+          ref={(el) => {
+            if (el) videoRefs.current[idx] = el;
+          }}
+          src={item.src}
+          className="w-full h-full object-cover"
+          controls={idx === playingIndex}
+          muted
+        />
+
+             {idx === centerIndex && playingIndex !== idx && (
+  <button
+    onClick={() => handlePlayClick(idx)}
+    className="absolute inset-0 flex items-center justify-center bg-black/30 transition"
+  >
+    <PlayCircle className="w-16 h-16 text-white opacity-90 hover:scale-105 transition-transform" />
+  </button>
+)}
+
             </div>
           ))}
         </div>
       </div>
-      <div className="flex  justify-center ">
-  <a
-    href="/brochure.pdf" 
-    download
-    className="inline-flex items-center gap-2 mt-6 px-6 py-2 bg-[#652f8e] text-white rounded-full font-medium hover:bg-[#501d6a] transition"
-  >
-    Download Brochure
-    <ArrowDownToLine size={18} />
-  </a>
-</div>
 
+      {/* Brochure Button */}
+      <div className="flex justify-center">
+        <a
+          href="/brochure.pdf"
+          download
+          className="inline-flex items-center gap-2 mt-6 px-6 py-2 bg-[#652f8e] text-white rounded-full font-medium hover:bg-[#501d6a] transition"
+        >
+          Download Brochure
+          <ArrowDownToLine size={18} />
+        </a>
+      </div>
     </section>
   );
 }

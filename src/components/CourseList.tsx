@@ -9,32 +9,32 @@ const courses = [
   {
     title: 'Graphic Designing',
     subtitle: 'Course',
-    image: '/course1.jpg',
+    image: '/course.jpg',
   },
   {
     title: 'Video Editing',
     subtitle: 'Course',
-    image: '/course2.jpg',
+    image: '/course.jpg',
   },
   {
     title: 'Digital Marketing',
     subtitle: 'Course',
-    image: '/course3.jpg',
+    image: '/course.jpg',
   },
   {
     title: 'UI/UX Designing',
     subtitle: 'Course',
-    image: '/course1.jpg',
+    image: '/course.jpg',
   },
   {
     title: 'Animation & Motion Graphics',
     subtitle: 'Course',
-    image: '/course2.jpg',
+    image: '/course.jpg',
   },
   {
     title: 'Advertising and Branding',
     subtitle: 'Course',
-    image: '/course3.jpg',
+    image: '/course.jpg',
   },
 ];
 
@@ -63,7 +63,7 @@ const responsive = {
 
 export default function CourseSlider() {
   return (
-    <section className="py-10 bg-white">
+    <section className="py-6 bg-white">
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 text-gray-800">
           Select Your Course

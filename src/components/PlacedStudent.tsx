@@ -4,14 +4,21 @@ import Image from 'next/image';
 import { useEffect, useRef } from 'react';
 
 const students = [
-  { name: 'Anjali Sharma', img: '/s1.jpg' },
-  { name: 'Ravi Mehra', img: '/s2.jpg' },
-  { name: 'Sneha Gupta', img: '/s3.jpg' },
-  { name: 'Amit Raj', img: '/s4.jpg' },
-  { name: 'Pooja Yadav', img: '/s5.jpg' },
-  { name: 'Vikram Singh', img: '/s6.jpg' },
-  { name: 'Neha Verma', img: '/s7.jpg' },
-  { name: 'Rohit Saini', img: '/s8.jpg' },
+  { name: 'Abhishek', img: '/abhishek.webp' },
+  { name: 'Akil', img: '/Akil.webp' },
+  { name: 'Aman', img: '/Aman.webp' },
+  { name: 'Amit', img: '/Amit.webp' },
+  { name: 'Arjun', img: '/arjun.webp' },
+  { name: 'Bhavna', img: '/Bhavna.webp' },
+  { name: 'Deepika', img: '/Deepika.webp' },
+  { name: 'Diksha', img: '/diksha.webp' },
+   { name: 'Gautam', img: '/gautam.webp' },
+    { name: 'Karan', img: '/karan.webp' },
+     { name: 'Manish', img: '/Manish.webp' },
+      { name: 'Mansi', img: '/mansi.webp' },
+       { name: 'Rajnish', img: '/Rajnish.webp' },
+        { name: 'Sunil', img: '/Sunil.webp' },
+         { name: 'Sushmita', img: '/sushmita.webp' },
 ];
 
 export default function PlacedStudentsGallery() {
