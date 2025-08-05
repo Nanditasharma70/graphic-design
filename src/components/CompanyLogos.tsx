@@ -52,7 +52,7 @@ export default function CompanyLogos() {
   }, []);
 
   return (
-    <section className="py-12 bg-gray-50 relative">
+    <section className="py-12 bg-gray-200 relative">
       <div className="max-w-6xl mx-auto px-4">
         {/* Header */}
         <div className="flex justify-between items-center mb-6 relative">
@@ -81,7 +81,7 @@ export default function CompanyLogos() {
         <div className="overflow-hidden mx-auto md:w-[832px]"> {/* 5 logos wide (140px + 24px gap * 4) */}
           <div
             ref={scrollRef}
-            className="flex gap-6 overflow-x-auto scroll-smooth no-scrollbar"
+            className="flex gap-6 overflow-x-auto scroll-smooth no-scrollbar shadow-xl"
           >
             {logos.map((logo, idx) => (
               <div

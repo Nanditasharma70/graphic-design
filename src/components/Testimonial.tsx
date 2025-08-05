@@ -75,7 +75,7 @@ export default function OurTeam() {
           {teamMembers.map((member, idx) => (
             <div
               key={idx}
-              className="flex-shrink-0 w-[85%] sm:w-[65%] md:w-[30%] lg:w-[25%] snap-center bg-white rounded-2xl shadow-lg transition-transform duration-500 hover:scale-105"
+              className="flex-shrink-0 w-[85%] sm:w-[65%] md:w-[30%] lg:w-[25%] snap-center bg-white rounded-2xl shadow-xl transition-transform duration-500 hover:scale-105"
             >
               <div className="relative w-full h-72">
                 <Image
@@ -86,7 +86,7 @@ export default function OurTeam() {
                 />
               </div>
 
-              <div className="bg-white p-5 text-[#652f8e] text-center rounded-b-2xl">
+              <div className="bg-white  p-2 text-[#652f8e] text-center rounded-b-2xl">
                 <h3 className="text-xl font-semibold">{member.name}</h3>
                 <p className="text-sm italic mb-2">{member.role}</p>
               </div>

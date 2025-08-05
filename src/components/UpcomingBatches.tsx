@@ -1,6 +1,8 @@
 'use client';
 
 import { useState } from 'react';
+import { ChevronRight } from 'lucide-react';
+
 
 type CourseName = 'Graphic Designing' | 'Video Editing' | 'Digital Marketing';
 
@@ -97,21 +99,39 @@ export default function UpcomingBatches() {
           <p className="text-gray-500 mt-2">Choose the course and join our next batch</p>
         </div>
 
-        <div className="flex justify-center gap-3 mb-10 flex-wrap">
-          {tabs.map((tab) => (
-            <button
-              key={tab}
-              onClick={() => setActiveTab(tab)}
-              className={`px-5 py-2 rounded-full text-sm font-medium transition border ${
-                activeTab === tab
-                  ? 'bg-[#652f8e] text-white border-[#652f8e] shadow'
-                  : 'bg-white text-gray-700 border-gray-300 hover:bg-purple-50 hover:text-[#652f8e]'
-              }`}
-            >
-              {tab}
-            </button>
-          ))}
-        </div>
+       <div className="relative mb-10">
+  {/* Scrollable Tab Buttons */}
+  <div
+    className="flex gap-3 overflow-x-auto no-scrollbar px-2 scroll-smooth"
+    id="tab-scroll-container"
+  >
+    {tabs.map((tab) => (
+      <button
+        key={tab}
+        onClick={() => setActiveTab(tab)}
+        className={`flex-shrink-0 px-5 py-2 rounded-full text-sm font-medium transition border whitespace-nowrap ${
+          activeTab === tab
+            ? 'bg-[#652f8e] text-white border-[#652f8e] shadow'
+            : 'bg-white text-gray-700 border-gray-300 hover:bg-purple-50 hover:text-[#652f8e]'
+        }`}
+      >
+        {tab}
+      </button>
+    ))}
+  </div>
+
+  {/* Chevron Scroll Button */}
+  <button
+    onClick={() => {
+      const container = document.getElementById('tab-scroll-container');
+      if (container) container.scrollBy({ left: 150, behavior: 'smooth' });
+    }}
+    className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white shadow-md rounded-full p-1 z-10 hidden sm:block"
+  >
+    <ChevronRight className="w-5 h-5 text-[#652f8e]" />
+  </button>
+</div>
+
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {batchData[activeTab].map((batch, idx) => (

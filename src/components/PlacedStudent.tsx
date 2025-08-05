@@ -61,7 +61,7 @@ export default function PlacedStudentsGallery() {
   };
 
   return (
-    <section className="py-16 bg-gray-50 relative">
+    <section className="py-10 bg-gray-100 relative">
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center text-[#652f8e] mb-10">
           Recently Placed Students
@@ -72,7 +72,7 @@ export default function PlacedStudentsGallery() {
           className="
             no-scrollbar
             overflow-auto
-            h-[500px] md:h-auto
+            h-[350px] md:h-auto
             md:flex md:gap-6 md:overflow-x-auto md:overflow-y-hidden
           "
         >
@@ -81,7 +81,7 @@ export default function PlacedStudentsGallery() {
               <div
                 key={index}
                 onClick={() => handleCardClick(index)}
-                className="relative group overflow-hidden rounded-xl shadow-md w-full md:w-[240px] h-[240px] flex-shrink-0 cursor-pointer"
+                className="relative group overflow-hidden rounded-xl shadow-md w-full md:w-[240px] h-[240px]  flex-shrink-0 cursor-pointer"
               >
                 <Image
                   src={student.img}

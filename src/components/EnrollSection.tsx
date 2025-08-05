@@ -50,91 +50,94 @@ export default function EnrollSection() {
   };
 
   return (
-    <section className="bg-white py-10 px-4">
+    <section className="bg-[#652f8e] py-6 px-4">
       <div className="text-center mb-10">
-        <h2 className="text-3xl font-extrabold text-[#652f8e]"> Online & Offline Classes</h2>
+        <h2 className="text-3xl font-bold text-white"> Online & Offline Classes</h2>
       </div>
 
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
         {/* Left: Form & Offer */}
         <div className="flex flex-col items-center md:items-center">
 
-          <div className="bg-[#652f8e] text-white rounded-2xl p-6 shadow-md w-full max-w-md">
-            <h3 className="text-lg font-bold text-center mb-4">BOOK FREE DEMO SESSION</h3>
+          <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-md w-full max-w-md mx-auto">
+  <h3 className="text-xl font-semibold text-center text-[#652f8e] mb-4">
+    Book Free Demo Session
+  </h3>
 
-            {step === 1 ? (
-              <form className="space-y-3" onSubmit={(e) => e.preventDefault()}>
-                <input
-                  type="text"
-                  placeholder="Name"
-                  value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full px-4 py-2 rounded-md bg-white text-gray-800 placeholder-gray-500 focus:outline-none"
-                />
-                <input
-                  type="tel"
-                  placeholder="Mobile No."
-                  value={formData.mobile}
-                  onChange={(e) => setFormData({ ...formData, mobile: e.target.value })}
-                  className="w-full px-4 py-2 rounded-md bg-white text-gray-800 placeholder-gray-500 focus:outline-none"
-                />
-                <input
-                  type="email"
-                  placeholder="Email ID"
-                  value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full px-4 py-2 rounded-md bg-white text-gray-800 placeholder-gray-500 focus:outline-none"
-                />
-                <select
-                  value={formData.course}
-                  onChange={(e) => setFormData({ ...formData, course: e.target.value })}
-                  className="w-full px-4 py-2 rounded-md bg-white text-gray-800 focus:outline-none"
-                >
-                  <option value="">Select Course</option>
-                  <option>Graphic Designing</option>
-                  <option>Video Editing</option>
-                  <option>Digital Marketing</option>
-                </select>
+  {step === 1 ? (
+    <form className="space-y-3" onSubmit={(e) => e.preventDefault()}>
+      <input
+        type="text"
+        placeholder="Full Name"
+        value={formData.name}
+        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+        className="w-full px-4 py-2 border border-gray-300 rounded-md text-sm"
+      />
+      <input
+        type="tel"
+        placeholder="Mobile No."
+        value={formData.mobile}
+        onChange={(e) => setFormData({ ...formData, mobile: e.target.value })}
+        className="w-full px-4 py-2 border border-gray-300 rounded-md text-sm"
+      />
+      <input
+        type="email"
+        placeholder="Email ID"
+        value={formData.email}
+        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+        className="w-full px-4 py-2 border border-gray-300 rounded-md text-sm"
+      />
+      <select
+        value={formData.course}
+        onChange={(e) => setFormData({ ...formData, course: e.target.value })}
+        className="w-full px-4 py-2 border border-gray-300 rounded-md text-sm"
+      >
+        <option value="">Select Course</option>
+        <option>Graphic Designing</option>
+        <option>Video Editing</option>
+        <option>Digital Marketing</option>
+      </select>
 
-                <button
-                  type="button"
-                  onClick={handleSendOtp}
-                  className="w-full bg-gradient-to-r from-purple-500 to-[#652f8e] hover:from-[#652f8e] hover:to-purple-500 text-white py-2 rounded-full font-bold transition-opacity duration-300 hover:opacity-90"
-                >
-                  Send OTP
-                </button>
-              </form>
-            ) : (
-              <div className="space-y-3">
-                <input
-                  type="text"
-                  placeholder="Enter OTP"
-                  value={otp}
-                  onChange={(e) => setOtp(e.target.value)}
-                  className="w-full px-4 py-2 rounded-md bg-white text-gray-800 placeholder-gray-500 focus:outline-none"
-                />
-                <button
-                  onClick={handleVerifyOtp}
-                  className="w-full bg-gradient-to-r from-purple-500 to-[#652f8e] hover:from-[#652f8e] hover:to-purple-500 text-white py-2 rounded-full font-bold transition-opacity duration-300 hover:opacity-90"
-                >
-                  Verify OTP
-                </button>
-              </div>
-            )}
-          </div>
+      <button
+        type="button"
+        onClick={handleSendOtp}
+        className="w-full bg-[#652f8e] text-white py-2 rounded-md text-sm font-medium hover:bg-[#582673]"
+      >
+        Send OTP
+      </button>
+    </form>
+  ) : (
+    <div className="space-y-3">
+      <input
+        type="text"
+        placeholder="Enter OTP"
+        value={otp}
+        onChange={(e) => setOtp(e.target.value)}
+        className="w-full px-4 py-2 border border-gray-300 rounded-md text-sm"
+      />
+      <button
+        onClick={handleVerifyOtp}
+        className="w-full bg-[#652f8e] text-white py-2 rounded-md text-sm font-medium hover:bg-[#582673]"
+      >
+        Verify OTP
+      </button>
+    </div>
+  )}
+</div>
+
         </div>
 
         {/* Right: Certification Info */}
 <div className="hidden md:flex flex-col items-center md:items-start text-center md:text-left">
-          <h3 className="text-2xl font-bold text-[#652f8e] mb-2">
+          <h3 className="text-2xl font-bold text-white mb-2">
             Become a professional <span className="font-light">and Certified</span>
           </h3>
-          <p className="text-gray-700 font-medium mb-6">
+          <p className="text-gray-200 font-medium mb-2">
             Verified to Multi-Factor<br />
             Approved with 100% Authenticated
           </p>
 
-          <div className="grid grid-cols-2 gap-8 w-full max-w-lg">
+          <div className="grid grid-cols-2 gap-2 w-full max-w-lg">
             {[
               '11 Years of excellency in computer education',
               'Institute registered Ministry of MSME Govt.of India',

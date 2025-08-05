@@ -67,8 +67,8 @@ export default function CourseCardSlider() {
 
         {/* Overlay Text */}
         <div className="absolute top-5 left-4 text-white leading-tight drop-shadow-md">
-          <div className="text-base">{course.title}</div>
-          <div className="text-xl font-bold">Course</div>
+          <div className=" md:text-2xl text-3xl">{course.title}</div>
+          <div className="text-3xl font-bold">Course</div>
         </div>
 
         {/* Buttons */}

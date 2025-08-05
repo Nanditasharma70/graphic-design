@@ -52,9 +52,7 @@ export default function StudentReviews() {
             height={300}
             className="w-full h-full object-cover"
           />
-          <div className="p-3 text-sm text-gray-600 text-center">
-            Verified Google Review
-          </div>
+         
         </div>
       ))}
     </div>

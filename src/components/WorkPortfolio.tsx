@@ -84,7 +84,7 @@ export default function StudentPortfolioCarousel() {
         {/* Scrollable Cards */}
         <div
           ref={scrollRef}
-          className="flex gap-4 overflow-x-auto no-scrollbar scroll-smooth snap-x snap-mandatory px-1 sm:px-4"
+          className="flex gap-4 overflow-x-auto no-scrollbar scroll-smooth snap-x snap-mandatory px-1 py-4 sm:px-4 shadow-xl"
         >
           {students.map((student, index) => (
             <div
