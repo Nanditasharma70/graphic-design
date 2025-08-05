@@ -89,7 +89,7 @@ export default function StudentPortfolioCarousel() {
           {students.map((student, index) => (
             <div
               key={index}
-              className="snap-start flex-shrink-0 w-[90%] sm:w-[calc(50%-1rem)] md:w-[calc(28.333%-1rem)] bg-[#652f8e] text-white rounded-xl shadow-md overflow-hidden hover:scale-[1.02] transition"
+              className="snap-start flex-shrink-0 w-[80%] sm:w-[calc(44%-1rem)] md:w-[calc(25.333%-1rem)] bg-[#652f8e] text-white rounded-xl shadow-md overflow-hidden hover:scale-[1.02] transition"
             >
               <Image
                 src={student.image}
