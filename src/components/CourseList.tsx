@@ -43,7 +43,7 @@ const courses = [
 
 export default function CourseCardSlider() {
   return (
-   <section className="py-6 px-4 bg-white">
+   <section className="pb-6 px-4 bg-white">
   <h2 className="text-center text-2xl font-semibold mb-6">Select Your Course</h2>
 
   <div className="flex overflow-x-auto gap-4 px-2 scroll-smooth snap-x snap-mandatory no-scrollbar">

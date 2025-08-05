@@ -51,7 +51,7 @@ export default function EnrollSection() {
 
   return (
     <section className="bg-[#652f8e] py-6 px-4">
-      <div className="text-center mb-10">
+      <div className="text-center mb-6">
         <h2 className="text-3xl font-bold text-white"> Online & Offline Classes</h2>
       </div>
 

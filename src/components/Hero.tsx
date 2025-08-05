@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 export default function Hero() {
   return (
-    <section className="relative bg-white py-16 px-4 mt-16 overflow-hidden">
+    <section className="relative bg-white py-14 px-4 mt-16 overflow-hidden">
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}

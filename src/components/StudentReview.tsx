@@ -32,18 +32,18 @@ export default function StudentReviews() {
   return (
     <section className="bg-white py-10 px-4">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-2xl sm:text-3xl font-bold text-center text-[#652f8e] mb-6">
+        <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-800 mb-4">
           What Our Students Say
         </h2>
 
          <div
       ref={scrollRef}
-      className="flex gap-4 overflow-x-auto scroll-smooth no-scrollbar snap-x snap-mandatory px-1"
+      className="flex gap-4 overflow-x-auto scroll-smooth no-scrollbar snap-x snap-mandatory px-4 py-2"
     >
       {reviews.map((review, index) => (
         <div
           key={`${review.id}-${index}`} // ensures uniqueness even if IDs repeat
-          className="snap-start flex-shrink-0 w-[80%] sm:w-[300px] rounded-xl bg-white shadow-md border border-gray-200 overflow-hidden hover:scale-[1.03] transition"
+          className="snap-start flex-shrink-0 w-[80%] sm:w-[300px] rounded-2xl bg-white shadow-md border border-gray-200 overflow-hidden hover:scale-[1.03] transition"
         >
           <Image
             src={review.image}

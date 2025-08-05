@@ -14,7 +14,7 @@ export default function EnquiryPopup() {
   });
 
   useEffect(() => {
-    const timer = setTimeout(() => setShowModal(true), 500); // show after 0.5s
+    const timer = setTimeout(() => setShowModal(true), 2000); // show after 0.5s
     return () => clearTimeout(timer);
   }, []);
 

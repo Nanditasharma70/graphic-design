@@ -102,7 +102,7 @@ export default function UpcomingBatches() {
        <div className="relative mb-10">
   {/* Scrollable Tab Buttons */}
   <div
-    className="flex gap-3 overflow-x-auto no-scrollbar px-2 scroll-smooth"
+    className="flex gap-3 overflow-x-auto no-scrollbar px-2 py-2 scroll-smooth"
     id="tab-scroll-container"
   >
     {tabs.map((tab) => (
@@ -111,7 +111,7 @@ export default function UpcomingBatches() {
         onClick={() => setActiveTab(tab)}
         className={`flex-shrink-0 px-5 py-2 rounded-full text-sm font-medium transition border whitespace-nowrap ${
           activeTab === tab
-            ? 'bg-[#652f8e] text-white border-[#652f8e] shadow'
+            ? 'bg-gray-300 text-gray-700 border-gray-400 shadow'
             : 'bg-white text-gray-700 border-gray-300 hover:bg-purple-50 hover:text-[#652f8e]'
         }`}
       >
@@ -156,7 +156,7 @@ export default function UpcomingBatches() {
                 </p>
               </div>
 
-              <button className="mt-5 w-full bg-[#652f8e] text-white py-2 rounded-full text-sm font-semibold hover:bg-[#652f8e] transition">
+              <button className="mt-5 w-full bg-blue-500 text-white py-2 rounded-lg text-sm font-semibold hover:bg-blue-600 transition">
                 Enroll Now →
               </button>
             </div>
