@@ -9,6 +9,8 @@ import Image from 'next/image';
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [courseDropdownOpen, setCourseDropdownOpen] = useState(false);
+
 
   return (
     <header className="bg-[#652f8e] shadow-md fixed top-0 left-0 right-0 z-50 transition-all md:-my-1 -my-4  ">
@@ -57,7 +59,23 @@ export default function Header() {
         {/* Right: Menu Links + Sign In (Desktop) */}
         <div className="hidden md:flex items-center gap-6">
           <Link href="#about" className="text-white hover:text-gray-50">About</Link>
-          <Link href="#courses" className="text-white hover:text-gray-50">Courses</Link>
+<div className="relative group">
+  <button
+    onClick={() => setCourseDropdownOpen(!courseDropdownOpen)}
+    className="text-white hover:text-gray-50 flex items-center gap-1"
+  >
+    Courses ▾
+  </button>
+
+  {/* Dropdown Menu */}
+  {courseDropdownOpen && (
+    <div className="absolute top-full left-0 mt-2 bg-white text-[#652f8e] rounded-md shadow-md w-48 z-50">
+      <Link href="/graphic-design-course" className="block px-4 py-2 hover:bg-purple-100">Graphic Designing</Link>
+      <Link href="#video-editing" className="block px-4 py-2 hover:bg-purple-100">Video Editing</Link>
+      <Link href="#digital-marketing" className="block px-4 py-2 hover:bg-purple-100">Digital Marketing</Link>
+    </div>
+  )}
+</div>
           <Link href="#contact" className="text-white hover:text-gray-50">Contact</Link>
 
           <button className="bg-white text-[#652f8e] px-5 py-2 rounded-full shadow-md hover:bg-gray-50 transition">
@@ -81,7 +99,16 @@ export default function Header() {
           }`}
       >
         <Link href="#about" className="block py-2 text-white hover:text-gray-50">About</Link>
-        <Link href="#courses" className="block py-2 text-white hover:text-gray-50">Courses</Link>
+<div>
+  <details className="group">
+    <summary className="py-2 text-white cursor-pointer list-none">Courses ▾</summary>
+    <div className="pl-4">
+      <Link href="/graphic-design-course" className="block py-1 text-white hover:text-gray-200">Graphic Designing</Link>
+      <Link href="#video-editing" className="block py-1 text-white hover:text-gray-200">Video Editing</Link>
+      <Link href="#digital-marketing" className="block py-1 text-white hover:text-gray-200">Digital Marketing</Link>
+    </div>
+  </details>
+</div>
         <Link href="#contact" className="block py-2 text-white hover:text-gray-50">Contact</Link>
 
 
