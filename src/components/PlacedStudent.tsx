@@ -70,6 +70,7 @@ export default function PlacedStudentsGallery() {
         <div
           ref={scrollRef}
           className="
+border-4 border-purple-900 rounded-lg  md:border-none
             no-scrollbar
             overflow-auto
             h-[350px] md:h-auto

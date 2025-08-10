@@ -57,7 +57,7 @@ export default function StudentPortfolioCarousel() {
   };
 
   return (
-    <section className="py-6 bg-white relative">
+    <section className="py-6 md:ms-0 ms-6 bg-white relative">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 text-center w-full">
@@ -84,7 +84,7 @@ export default function StudentPortfolioCarousel() {
         {/* Scrollable Cards */}
         <div
           ref={scrollRef}
-          className="flex gap-4 overflow-x-auto no-scrollbar scroll-smooth snap-x snap-mandatory px-1 py-4 sm:px-4 shadow-xl"
+          className="flex gap-4 overflow-x-auto no-scrollbar scroll-smooth snap-x snap-mandatory px-1 py-4 sm:px-6  shadow-xl"
         >
           {students.map((student, index) => (
             <div

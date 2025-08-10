@@ -19,7 +19,7 @@ Best Graphic Designing Institute in SAKET,  Delhi        </h2>
         <div className="w-full flex justify-center">
           <div className="w-48 h-auto relative">
             <Image
-              src="/Creative-Mindset.jpg" // replace with your actual path
+              src="/Creative-Mindset.jpg" 
               alt="Creative Brain"
               width={250}
               height={250}

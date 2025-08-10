@@ -52,7 +52,7 @@ export default function EnrollSection() {
   return (
     <section className="bg-[#652f8e] py-6 px-4">
       <div className="text-center mb-6">
-        <h2 className="text-3xl font-bold text-white"> Online & Offline Classes</h2>
+        <h2 className="text-2xl font-semibold text-white"> Online & Offline Classes</h2>
       </div>
 
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 items-center">

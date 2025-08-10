@@ -99,6 +99,7 @@ export default function CompanyLogos() {
   <div
     ref={scrollRef}
     className={`
+      border-4 border-purple-900 rounded-lg  md:border-none
       no-scrollbar
       h-[300px] md:h-auto
       overflow-auto

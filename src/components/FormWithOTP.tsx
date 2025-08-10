@@ -46,7 +46,7 @@ export default function EnquiryPopup() {
     <>
       {showModal && (
         <div className="fixed inset-0 bg-opacity-40 z-50 flex justify-center items-center">
-          <div className="bg-[#652f8e] text-white rounded-2xl p-6 shadow-md w-full max-w-md relative animate-fadeIn">
+          <div className="bg-[#652f8e] text-white rounded-2xl p-6 md:m-0 m-4 shadow-md w-full max-w-md relative animate-fadeIn">
             <button
               onClick={() => setShowModal(false)}
               className="absolute top-2 right-4 text-white text-xl hover:text-gray-300"
