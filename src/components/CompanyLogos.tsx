@@ -67,7 +67,7 @@ export default function CompanyLogos() {
   }, []);
 
   return (
-    <section className="py-12 relative">
+    <section className="py-12 relative  border-4 border-purple-900 rounded-lg  md:border-none mx-1">
       <div className="max-w-6xl mx-auto px-4">
         {/* Header */}
         <div className="flex justify-between items-center mb-6 relative">
@@ -99,7 +99,7 @@ export default function CompanyLogos() {
   <div
     ref={scrollRef}
     className={`
-      border-4 border-purple-900 rounded-lg  md:border-none
+     
       no-scrollbar
       h-[300px] md:h-auto
       overflow-auto

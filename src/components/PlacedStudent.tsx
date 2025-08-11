@@ -61,7 +61,7 @@ export default function PlacedStudentsGallery() {
   };
 
   return (
-    <section className="py-10 bg-gray-100 relative">
+    <section className="py-10 bg-white relative border-4 border-purple-900 rounded-lg  md:border-none mx-1">
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="text-xl md:text-2xl font- semibold text-center text-gray-800 mb-10">
           Our Recently <span className='text-3xl font-bold'> Placed Students</span>
@@ -70,7 +70,6 @@ export default function PlacedStudentsGallery() {
         <div
           ref={scrollRef}
           className="
-border-4 border-purple-900 rounded-lg  md:border-none
             no-scrollbar
             overflow-auto
             h-[350px] md:h-auto
