@@ -1,7 +1,7 @@
 'use client';
 
 import { useRef, useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, PlayCircle } from 'lucide-react';
+import { PlayCircle } from 'lucide-react';
 import { ArrowDownToLine } from 'lucide-react';
 
 const slides = [
@@ -75,21 +75,7 @@ export default function CreativeCarousel() {
             Student Feedback
           </h2>
 
-          {/* Chevron Buttons (Only on Desktop) */}
-          {/* <div className="absolute right-4 top-1 md:flex gap-2 hidden">
-            <button
-              onClick={() => scroll('left')}
-              className="bg-[#652f8e] hover:bg-[#501d6a] text-white p-2 rounded-full"
-            >
-              <ChevronLeft className="w-5 h-5" />
-            </button>
-            <button
-              onClick={() => scroll('right')}
-              className="bg-[#652f8e] hover:bg-[#501d6a] text-white p-2 rounded-full"
-            >
-              <ChevronRight className="w-5 h-5" />
-            </button>
-          </div> */}
+
         </div>
 
         {/* Carousel */}

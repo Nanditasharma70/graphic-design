@@ -103,5 +103,6 @@ export default function EnrollForm() {
         </form>
       </div>
     </section>
+    
   );
 }
