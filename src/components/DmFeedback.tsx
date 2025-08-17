@@ -67,7 +67,7 @@ export default function CreativeCarousel() {
   }, []);
 
   return (
-    <section className="bg-black py-10 text-[#652f8e] relative">
+    <section className="bg-gray-900 py-10 text-[#652f8e] relative">
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
         <div className="flex justify-between items-center mb-6 relative">
