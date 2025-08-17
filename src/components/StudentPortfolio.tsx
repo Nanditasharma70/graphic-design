@@ -6,11 +6,9 @@ import { ArrowDownToLine } from 'lucide-react';
 
 const slides = [
   { src: '/vivek-video.mp4' },
-  // { src: '/video.mp4' },
   { src: '/sumit.mp4' },
   { src: '/Adm.mp4' },
   { src: '/vivek-video.mp4' },
-  // { src: '/video.mp4' },
   { src: '/sumit.mp4' },
   { src: '/Adm.mp4' },
 ];
@@ -35,16 +33,6 @@ export default function CreativeCarousel() {
     setCenterIndex(index + centerOffset);
   };
 
-  const scroll = (dir: 'left' | 'right') => {
-    if (!scrollRef.current) return;
-    const cardWidth =
-      window.innerWidth < 768 ? window.innerWidth * 0.8 + 16 : 384 + 24;
-    scrollRef.current.scrollBy({
-      left: dir === 'left' ? -cardWidth : cardWidth,
-      behavior: 'smooth',
-    });
-  };
-
   const handlePlayClick = (index: number) => {
     videoRefs.current.forEach((video, i) => {
       if (video) {
@@ -61,8 +49,9 @@ export default function CreativeCarousel() {
 
   // Pause all videos on unmount
   useEffect(() => {
+    const videos = [...videoRefs.current]; // snapshot copy
     return () => {
-      videoRefs.current.forEach((video) => video?.pause());
+      videos.forEach((video) => video?.pause());
     };
   }, []);
 
@@ -74,8 +63,6 @@ export default function CreativeCarousel() {
           <h2 className="text-2xl text-gray-800 md:text-3xl font-semibold text-center w-full">
             Student Feedback
           </h2>
-
-
         </div>
 
         {/* Carousel */}
@@ -87,15 +74,9 @@ export default function CreativeCarousel() {
           {slides.map((item, idx) => (
             <div
               key={idx}
-              className={`
-                relative flex-shrink-0 snap-center overflow-hidden bg-black group
-                rounded-2xl h-50 sm:h-76
-                w-[99%] sm:w-[40%]
-                mx-auto sm:mx-0
-              `}
+              className="relative flex-shrink-0 snap-center overflow-hidden bg-black group rounded-2xl h-50 sm:h-76 w-[99%] sm:w-[40%] mx-auto sm:mx-0"
             >
               <video
-                key={idx}
                 ref={(el) => {
                   if (el) videoRefs.current[idx] = el;
                 }}
@@ -113,7 +94,6 @@ export default function CreativeCarousel() {
                   <PlayCircle className="w-16 h-16 text-white opacity-90 hover:scale-105 transition-transform" />
                 </button>
               )}
-
             </div>
           ))}
         </div>
@@ -124,7 +104,7 @@ export default function CreativeCarousel() {
         <a
           href="/brochure.pdf"
           download
-          className="inline-flex items-center gap-2 mt-6 px-4 py-2 bg-blue-500 text-white rounded-xl font-medium  transition"
+          className="inline-flex items-center gap-2 mt-6 px-4 py-2 bg-blue-500 text-white rounded-xl font-medium transition"
         >
           Download Course Brochure
           <ArrowDownToLine size={18} />

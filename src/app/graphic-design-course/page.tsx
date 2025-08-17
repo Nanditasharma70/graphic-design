@@ -6,7 +6,6 @@ import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import EnrollSection from '@/components/EnrollSection';
-import StudentPortfolioCarousel from '@/components/WorkPortfolio';
 import StudentPortfolio from '@/components/StudentPortfolio';
 import UpcomingBatches from '@/components/UpcomingBatches';
 import WorkPortfolio from '@/components/WorkPortfolio';
@@ -132,7 +131,6 @@ function page() {
             <WorkPortfolio/>
             <PlacedStudent/>
             <CodeInfoSection/>
-
             <StudentReviews/>
             <CreativitySection/>
             <WhyChooseSection/>

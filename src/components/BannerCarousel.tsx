@@ -1,5 +1,6 @@
 "use client"
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 const images = ['/banners/banner1.jpg', '/banners/banner2.jpg', '/banners/banner3.jpg'];
 
@@ -13,7 +14,7 @@ export default function BannerCarousel() {
 
   return (
     <div className="w-full h-[400px] overflow-hidden relative">
-      <img
+      <Image
         src={images[index]}
         alt="Banner"
         className="w-full h-full object-cover transition-all duration-700 ease-in-out"

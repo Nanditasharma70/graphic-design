@@ -1,5 +1,5 @@
 "use client";
-import { ChevronRight, BookOpen, Layers, Award, FileText } from "lucide-react";
+import {BookOpen, Layers, Award, FileText } from "lucide-react";
 import Link from "next/link";
 import { FaDownload } from "react-icons/fa";
 

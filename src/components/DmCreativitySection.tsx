@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import Link from 'next/link';
 import { FaDownload } from 'react-icons/fa';
 
@@ -19,7 +18,7 @@ export default function CreativitySection() {
 
   {/* Paragraph 1 */}
   <p className="text-gray-300 text-base md:text-lg">
-    Digital marketing is a dynamic and essential discipline in today's digital
+    Digital marketing is a dynamic and essential discipline in today&apos;s digital
     age, encompassing a wide range of strategies and techniques to promote
     businesses, build brand presence, and drive customer engagement and
     conversions. In our digital marketing institute, students will gain a

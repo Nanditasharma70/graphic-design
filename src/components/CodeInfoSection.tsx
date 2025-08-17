@@ -1,5 +1,6 @@
 'use client';
 import { ArrowRight } from 'lucide-react';
+import Image from 'next/image';
 
 
 export default function CourseInfoSection() {
@@ -43,10 +44,10 @@ export default function CourseInfoSection() {
     </h3>
 
     <div className="flex justify-center items-center gap-4 mb-4 flex-wrap">
-  <img src="/icons/ps.webp" alt="Photoshop" className="w-16 h-auto" />
-  <img src="/icons/ai.webp" alt="Illustrator" className="w-16 h-auto" />
-  <img src="/icons/id.webp" alt="InDesign" className="w-16 h-auto" />
-  <img src="/icons/corel.webp" alt="CorelDraw" className="w-16 h-auto" />
+  <Image src="/icons/ps.webp" alt="Photoshop" className="w-16 h-auto" />
+  <Image src="/icons/ai.webp" alt="Illustrator" className="w-16 h-auto" />
+  <Image src="/icons/id.webp" alt="InDesign" className="w-16 h-auto" />
+  <Image src="/icons/corel.webp" alt="CorelDraw" className="w-16 h-auto" />
 </div>
 
 

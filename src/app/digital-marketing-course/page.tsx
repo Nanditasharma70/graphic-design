@@ -9,7 +9,6 @@ import EnrollSection from '@/components/EnrollSection'
 import DmModuleSection from '@/components/DmModuleSection'
 import { useRef, useState, useEffect } from 'react';
 import { PlayCircle } from 'lucide-react';
-import UpcomingBatches from '@/components/UpcomingBatches'
 import UpComeBatch from '@/components/UpComeBatch'
 import StuReview from '@/components/StuReview'
 import DmOption from '@/components/DmOption'
@@ -29,7 +28,7 @@ const slides = [
     { src: '/Adm.mp4' },
 ];
 
-function page() {
+function Page() {
     const scrollRef = useRef<HTMLDivElement>(null);
     const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
     const [centerIndex, setCenterIndex] = useState(1);
@@ -426,4 +425,4 @@ function page() {
     )
 }
 
-export default page
+export default Page

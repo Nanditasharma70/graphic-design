@@ -78,12 +78,12 @@ export default function PlacedStudentsGallery() {
         >
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:flex md:gap-6">
   {students.map((student, index) => (
-    <div
-      key={index}
-      onClick={() => handleCardClick(index)}
-      className="bg-black rounded-xl shadow-md overflow-hidden w-full md:w-[240px] flex-shrink-0 cursor-pointer"
-    >
-      {/* Student Image */}
+   <div
+    key={index}
+    onClick={() => handleCardClick(index)}
+    className={`bg-black rounded-xl shadow-md overflow-hidden w-full md:w-[240px] flex-shrink-0 cursor-pointer
+      ${tappedIndex === index ? 'ring-2 ring-purple-600' : ''}`}
+  >   {/* Student Image */}
       <div className="relative w-full h-[220px]">
         <Image
           src={student.img}
