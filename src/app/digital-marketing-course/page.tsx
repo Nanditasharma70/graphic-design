@@ -132,7 +132,7 @@ function Page() {
                                 "/bing logo.svg",
                                 "/Instagram Logo.svg",
                                 "/Yahoo.svg",
-                                "/Facebook.svg"
+                                "/Facebok Logo.svg"
                             ].map((logo, index) => (
                                 <Image
                                     key={index}
@@ -151,7 +151,7 @@ function Page() {
                                 "/bing logo.svg",
                                 "/Instagram Logo.svg",
                                 "/Yahoo.svg",
-                                "/Facebook.svg"
+                                "/Facebok Logo.svg"
                             ].map((logo, index) => (
                                 <Image
                                     key={`repeat-${index}`}
