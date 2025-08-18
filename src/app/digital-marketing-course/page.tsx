@@ -16,12 +16,15 @@ import DmRecentlyPlace from '@/components/DmRecentlyPlace'
 import Footer from '@/components/Footer'
 import CallNow from '@/components/CallNow'
 import DmFeedback from '@/components/DmFeedback'
+import DmAnshikaDigital from '@/components/DmAnshikaDigital'
+import DmGoodBye from '@/components/DmGoodBye'
+import DmPlacedCompany from '@/components/DmPlacedCompany'
 
 
 function Page() {
     // const scrollRef = useRef<HTMLDivElement>(null);
     const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
-   
+
 
     // const scroll = (dir: 'left' | 'right') => {
     //     if (!scrollRef.current) return;
@@ -33,7 +36,7 @@ function Page() {
     //     });
     // };
 
-   
+
 
     // Pause all videos on unmount
     useEffect(() => {
@@ -125,7 +128,11 @@ function Page() {
                                 "/meta.png",
                                 "/google.png",
                                 "/amazon.png",
-                                "/spotify.png"
+                                "/spotify.png",
+                                "/bing logo.svg",
+                                "/Instagram Logo.svg",
+                                "/Yahoo.svg",
+                                "/Facebook.svg"
                             ].map((logo, index) => (
                                 <Image
                                     key={index}
@@ -140,7 +147,11 @@ function Page() {
                                 "/meta.png",
                                 "/google.png",
                                 "/amazon.png",
-                                "/spotify.png"
+                                "/spotify.png",
+                                "/bing logo.svg",
+                                "/Instagram Logo.svg",
+                                "/Yahoo.svg",
+                                "/Facebook.svg"
                             ].map((logo, index) => (
                                 <Image
                                     key={`repeat-${index}`}
@@ -260,56 +271,56 @@ function Page() {
 
                 </div>
                 <DmModuleSection />
-                <DmFeedback/>
-              {/* Reviews Heading */}
-<div className="flex justify-center items-center mt-10 -mb-6 relative">
-  <h2 className="text-2xl text-gray-200 md:text-3xl font-semibold text-center">
-    Reviews
-  </h2>
-</div>
+                <DmFeedback />
+                {/* Reviews Heading */}
+                <div className="flex justify-center items-center mt-10 -mb-10 relative">
+                    <h2 className="text-xl text-gray-200 md:text-2xl font-semibold text-center">
+                        Reviews
+                    </h2>
+                </div>
 
-{/* Reviews Row - Single Line */}
-<div className="flex justify-center items-center gap-4 sm:gap-6 mt-6 px-4 overflow-x-auto whitespace-nowrap scrollbar-hide">
-  {/* Google Review */}
-  <div className="flex items-center gap-2">
-    <Image
-      src="/google.png"
-      alt="Google review"
-      width={100}
-      height={80}
-      className="w-20 sm:w-[100px] h-auto"
-    />
-    <Image
-      src="/rating.png"
-      alt="Google rating"
-      width={130}
-      height={80}
-      className="w-28 sm:w-[130px] h-auto"
-    />
-    <p className="text-lg md:block hidden sm:text-xl font-semibold text-gray-200">
-      5.0 <span className="px-2 text-xl sm:text-2xl font-bold">|</span>
-    </p>
-  </div>
+                {/* Reviews Row - Single Line */}
+                <div className="flex justify-center items-center gap-32 sm:gap-2  px-4 overflow-x-auto whitespace-nowrap scrollbar-hide">
+                    {/* Google Review */}
+                    <div className="flex items-center gap-2">
+                        <Image
+                            src="/google.png"
+                            alt="Google review"
+                            width={100}
+                            height={80}
+                            className="w-20 sm:w-[100px] h-auto"
+                        />
+                        <Image
+                            src="/rating.png"
+                            alt="Google rating"
+                            width={130}
+                            height={80}
+                            className="w-28 sm:w-[130px] h-auto"
+                        />
+                        <p className="text-lg sm:text-xl font-semibold text-gray-200">
+                            5.0 <span className="text-xl sm:text-2xl font-bold px-2"> | </span>
+                        </p>
+                    </div>
 
-  {/* JustDial Review */}
-  <div className="flex items-center px-6">
-    <Image
-      src="/justdial.png"
-      alt="JustDial review"
-      width={100}
-      height={80}
-      className="w-20 sm:w-[100px] h-auto"
-    />
-    <Image
-      src="/rating.png"
-      alt="JustDial rating"
-      width={130}
-      height={80}
-      className="w-28 sm:w-[130px] h-auto"
-    />
-    <p className="text-lg sm:text-xl font-semibold text-gray-200">4.9</p>
-  </div>
-</div>
+                    {/* JustDial Review */}
+                    <div className="flex items-center">
+                        <Image
+                            src="/justdial.png"
+                            alt="JustDial review"
+                            width={100}
+                            height={80}
+                            className="w-20 sm:w-[100px] h-auto"
+                        />
+                        <Image
+                            src="/rating.png"
+                            alt="JustDial rating"
+                            width={130}
+                            height={80}
+                            className="w-28 sm:w-[130px] h-auto"
+                        />
+                        <p className="text-lg sm:text-xl font-semibold text-gray-200">4.9</p>
+                    </div>
+                </div>
 
                 {/* Highlight Section */}
                 <div className="flex justify-center items-center py-8 px-4 bg-black">
@@ -329,8 +340,11 @@ function Page() {
                 <DmOption />
                 <DmCreativitySection />
                 <DmRecentlyPlace />
-                <CallNow/>
-                <Footer/>
+                <DmAnshikaDigital />
+                <DmPlacedCompany />
+                <DmGoodBye />
+                <CallNow />
+                <Footer />
             </section>
 
         </div>

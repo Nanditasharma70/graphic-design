@@ -44,10 +44,10 @@ export default function CourseInfoSection() {
     </h3>
 
     <div className="flex justify-center items-center gap-4 mb-4 flex-wrap">
-  <Image src="/icons/ps.webp" alt="Photoshop" className="w-16 h-auto" />
-  <Image src="/icons/ai.webp" alt="Illustrator" className="w-16 h-auto" />
-  <Image src="/icons/id.webp" alt="InDesign" className="w-16 h-auto" />
-  <Image src="/icons/corel.webp" alt="CorelDraw" className="w-16 h-auto" />
+  <Image src="/icons/ps.webp" width={16} height={16} alt="Photoshop" className="w-16 h-auto" />
+  <Image src="/icons/ai.webp" width={16} height={16} alt="Illustrator" className="w-16 h-auto" />
+  <Image src="/icons/id.webp" width={16} height={16} alt="InDesign" className="w-16 h-auto" />
+  <Image src="/icons/corel.webp" width={16} height={16} alt="CorelDraw" className="w-16 h-auto" />
 </div>
 
 
