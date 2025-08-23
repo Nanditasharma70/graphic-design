@@ -94,7 +94,7 @@ export default function UpcomingBatches() {
   return (
     <section className="py-10 bg-black">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="text-left mb-6 ps-4">
+        <div className="text-left mb-4 ps-4">
           <h2 className="text-3xl font-extrabold text-blue-500"> Upcoming Batches</h2>
           <p className="text-gray-300 mt-2">Choose the course and join our next batch</p>
         </div>

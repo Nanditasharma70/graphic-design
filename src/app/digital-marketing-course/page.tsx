@@ -125,8 +125,8 @@ function Page() {
                         <div className="flex animate-slide">
                             {/* Repeat logos twice for smooth loop */}
                             {[
-                                "/meta.png",
-                                "/google.png",
+                                "/Youtube logo.svg",
+                                "/Googel Logo.svg",
                                 "/amazon.png",
                                 "/spotify.png",
                                 "/bing logo.svg",
@@ -140,12 +140,12 @@ function Page() {
                                     width={100}
                                     height={100}
                                     alt={`Company ${index + 1}`}
-                                    className="h-16 w-auto mx-8"
+                                    className="h-14 w-auto mx-4"
                                 />
                             ))}
                             {[
-                                "/meta.png",
-                                "/google.png",
+                                 "/Youtube logo.svg",
+                                "/Googel Logo.svg",
                                 "/amazon.png",
                                 "/spotify.png",
                                 "/bing logo.svg",
@@ -159,7 +159,7 @@ function Page() {
                                     width={100}
                                     height={100}
                                     alt={`Company ${index + 1}`}
-                                    className="h-16 w-auto mx-8"
+                                    className="h-14 w-auto mx-2"
                                 />
                             ))}
                         </div>
@@ -171,7 +171,7 @@ function Page() {
     100% { transform: translateX(-50%); }
   }
   .animate-slide {
-    animation: slide 15s linear infinite;
+    animation: slide 20s linear infinite;
   }
 `}</style>
 

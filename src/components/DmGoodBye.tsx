@@ -17,7 +17,7 @@ export default function GoodbyeSection() {
         </h3>
 
         {/* Image Box */}
-        <div className="relative my-6">
+        <div className="relative my-2">
           {/* Left Arrow */}
           <span className="absolute left-0 top-1/2 transform -translate-y-1/2 text-white text-3xl cursor-pointer">
             ←
@@ -39,7 +39,7 @@ export default function GoodbyeSection() {
             →
           </span>
         </div>
-
+<p className="text-md text-white">.......................</p>
         {/* Footer Text */}
         <p className="text-lg italic text-white mt-4">
           Connection Forever!

@@ -23,7 +23,7 @@ export default function WhyChooseSection() {
             </span>
 
             {/* Paragraphs */}
-            <p className="text-sm sm:text-base md:text-lg text-gray-300 leading-relaxed text-justify sm:text-center">
+            <p className="text-sm sm:text-base md:text-lg text-gray-300 leading-relaxed text-justify sm:text-center px-4">
                 Professional Training Institute of Graphic Designing and Video Editing, Courses provided at an advanced level.
                 We are not only conducting courses but along with the courses we also provide live projects for our students to practice.
                 Training Institute of Graphic Designing and Video Editing, Courses provided at an advanced level.
@@ -37,7 +37,7 @@ export default function WhyChooseSection() {
       <Link
         href="/course-syllabus.pdf"
         download
-        className="block md:hidden flex justify-center items-center gap-2 px-6 py-3 mb-18 mt-6 md:mb-8 text-white font-semibold rounded-lg shadow-lg transition-all duration-300 bg-gradient-to-r from-black via-blue-700 to-purple-700 border-2 border-gray-200"
+        className="block md:hidden flex justify-center items-center gap-2 px-6 py-3 mx-4 mb-18 mt-6 md:mb-8 text-white font-semibold rounded-lg shadow-lg transition-all duration-300 bg-gradient-to-r from-black via-blue-700 to-purple-700 border-2 border-gray-200"
       >
         <FaDownload className="text-lg" />
         Download Course Syllabus

@@ -61,12 +61,12 @@ export default function PlacedStudentsGallery() {
   };
 
   return (
-   <section className=" md:py-10 relative border-l-4 border-r-4 border-b-4 rounded-lg border-purple-900 mx-1 md:border-none">
+   <section className=" md:py-10 relative border-l-4 border-r-4 border-b-4 rounded-lg border-gray-200 mx-1 md:border-none">
   <div className="max-w-7xl mx-auto">
     {/* Title with border effect (only mobile) */}
     <div className="relative flex justify-center md:hidden ">
       {/* Top border line */}
-      <div className="absolute top-0 left-0 w-full border-t-4 border-purple-900"></div>
+      <div className="absolute top-0 left-0 w-full border-t-4 border-gray-200"></div>
 
       {/* Title overlapping top border */}
       <h2 className="relative z-10 px-3 -mt-3 bg-black text-lg font-semibold text-center text-gray-300">
