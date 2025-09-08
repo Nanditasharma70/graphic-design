@@ -20,6 +20,10 @@ import DmAnshikaDigital from '@/components/DmAnshikaDigital'
 import DmGoodBye from '@/components/DmGoodBye'
 import DmPlacedCompany from '@/components/DmPlacedCompany'
 import { FaDownload } from 'react-icons/fa'
+import VeDetail from '@/components/VeDetail'
+import EVmoduleSection from '@/components/EVmoduleSection'
+import VeAboutCourse from '@/components/VeAboutCourse'
+import CourseHighlightSection from '@/components/CourseHighlightSection'
 
 
 function Page() {
@@ -152,29 +156,6 @@ function Page() {
         </h3>
 
         <EnrollSection />
-        <div className="flex flex-col md:flex-row items-center justify-center gap-8 p-6 bg-black min-h-screen">
-
-          {/* First Card */}
-          <div className="relative w-80 h-40 bg-gradient-to-r from-blue-900 via-purple-900 to-blue-500 rounded-xl border-4 border-yellow-300 shadow-lg">
-            <div className="absolute top-2 left-2 right-2 bottom-2 bg-gradient-to-r from-blue-800 via-purple-800 to-blue-400 rounded-lg flex flex-col justify-center items-center text-center px-4">
-              <h2 className="text-white text-lg font-bold">100% Job Placement</h2>
-              <p className="text-white text-sm mt-2">Assistance after Course Completion</p>
-            </div>
-            {/* Side mock scrollbars */}
-            <div className="absolute left-1 top-10 w-1 h-20 bg-gray-300 rounded-full"></div>
-            <div className="absolute right-1 top-10 w-1 h-20 bg-gray-300 rounded-full"></div>
-          </div>
-
-          {/* Second Card */}
-          <div className="relative w-80 h-32 bg-gradient-to-r from-blue-900 via-purple-900 to-blue-500 rounded-xl border-4 border-yellow-300 shadow-lg">
-            <div className="absolute top-2 left-2 right-2 bottom-2 bg-gradient-to-r from-blue-800 via-purple-800 to-blue-400 rounded-lg flex flex-col justify-center items-center text-center px-4">
-              <h2 className="text-white text-lg font-bold">Duration: <span className="font-normal">3–4 Months</span></h2>
-            </div>
-            <div className="absolute left-1 top-8 w-1 h-16 bg-gray-300 rounded-full"></div>
-            <div className="absolute right-1 top-8 w-1 h-16 bg-gray-300 rounded-full"></div>
-          </div>
-
-        </div>
         {/* Reviews Heading */}
         <div className="flex justify-center items-center mt-10 -mb-10 relative">
           <h2 className="text-xl text-gray-200 md:text-2xl font-semibold text-center">
@@ -285,22 +266,24 @@ function Page() {
 
         </div>
         {/* Gradient Button (Full Width) */}
-       <div className="flex justify-center items-center my-8">
-      <Link
-        href="/course-syllabus.pdf"
-        download
-        className="flex justify-center items-center gap-2 w-full max-w-xs px-6 py-3 text-white font-semibold rounded-lg shadow-lg transition-all duration-300 bg-gradient-to-r from-black via-blue-700 to-purple-700 border-2 border-gray-200 hover:scale-105"
-      >
-        <FaDownload className="text-lg" />
-        Download Course Syllabus
-      </Link>
-    </div>
+        <div className="flex justify-center items-center my-8">
+          <Link
+            href="/course-syllabus.pdf"
+            download
+            className="flex justify-center items-center gap-2 w-full max-w-xs px-6 py-3 text-white font-semibold rounded-lg shadow-lg transition-all duration-300 bg-gradient-to-r from-black via-blue-700 to-purple-700 border-2 border-gray-200 hover:scale-105"
+          >
+            <FaDownload className="text-lg" />
+            Download Course Syllabus
+          </Link>
+        </div>
         <DmFeedback />
-
-        <DmCreativitySection />
+        {/* <CourseHighlightSection/> */}
+        <VeAboutCourse />
+        <VeDetail />
         <UpComeBatch />
         <StuReview />
         <DmRecentlyPlace />
+        <EVmoduleSection />
         <DmPlacedCompany />
         <DmGoodBye />
         <CallNow />

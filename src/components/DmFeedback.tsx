@@ -71,7 +71,7 @@ export default function CreativeCarousel() {
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
         <div className="flex justify-between items-center mb-6 relative">
-          <h2 className="text-2xl text-gray-200 md:text-3xl font-semibold text-center w-full">
+          <h2 className="text-2xl text-white md:text-3xl font-semibold text-center w-full">
             Student Feedback
           </h2>
 
