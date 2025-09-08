@@ -71,7 +71,7 @@ export default function Header() {
   {courseDropdownOpen && (
     <div className="absolute top-full left-0 mt-2 bg-white text-[#652f8e] rounded-md shadow-md w-48 z-50">
       <Link href="/graphic-design-course" className="block px-4 py-2 hover:bg-purple-100">Graphic Designing</Link>
-      <Link href="#video-editing" className="block px-4 py-2 hover:bg-purple-100">Video Editing</Link>
+      <Link href="/video-editing" className="block px-4 py-2 hover:bg-purple-100">Video Editing</Link>
       <Link href="/digital-marketing-course" className="block px-4 py-2 hover:bg-purple-100">Digital Marketing</Link>
     </div>
   )}
