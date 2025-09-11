@@ -61,7 +61,7 @@ export default function PlacedStudentsGallery() {
   };
 
   return (
-    <section className="py-10 bg-white relative border-4 border-purple-900 rounded-lg  md:border-none mx-1">
+    <section className="py-10 bg-white relative border-1 border-purple-900 rounded-lg mx-4  md:border-none mx-1">
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="text-xl md:text-2xl font- semibold text-center text-gray-800 mb-10">
           Our Recently <span className='text-3xl font-bold'> Placed Students</span>
@@ -76,29 +76,29 @@ export default function PlacedStudentsGallery() {
             md:flex md:gap-6 md:overflow-x-auto md:overflow-y-hidden
           "
         >
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:flex md:gap-6">
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:flex md:gap-4">
             {students.map((student, index) => (
               <div
                 key={index}
                 onClick={() => handleCardClick(index)}
-                className={`bg-white rounded-xl shadow-md overflow-hidden w-full md:w-[240px] flex-shrink-0 cursor-pointer
-      ${tappedIndex === index ? 'ring-2 ring-purple-600' : ''}`}
+                className={`bg-[#f3e8ff] rounded-xl shadow-md p-6 text-center cursor-pointer transition-transform hover:scale-105
+            ${tappedIndex === index ? 'ring-2 ring-purple-600' : ''}`}
               >      {/* Student Image */}
-                <div className="relative w-full h-[220px]">
+                <div className="w-28 h-28 mx-auto rounded-full border-4 border-[#652f8e] overflow-hidden mb-4">
                   <Image
                     src={student.img}
                     alt={student.name}
-                    fill
-                    className="object-cover"
+                    width={100}
+                    height={100}
+                    className="object-cover w-full h-full"
                   />
                 </div>
 
-                {/* Student Details */}
-                <div className="p-4 text-center">
-                  <p className="text-[#652f8e] font-semibold text-lg">{student.name}</p>
-                  <p className="text-gray-600 text-sm italic">{student.title}</p>
-                  <p className="text-gray-700 text-sm">{student.company}</p>
-                </div>
+
+                {/* Student Info */}
+                <p className="text-[#652f8e] font-semibold text-lg">{student.name}</p>
+                <p className="text-gray-600 text-sm italic">{student.title}</p>
+                <p className="text-gray-700 text-sm">{student.company}</p>
               </div>
             ))}
           </div>

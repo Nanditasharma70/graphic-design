@@ -59,7 +59,7 @@ export default function StudentPortfolioCarousel() {
   return (
     <section className="py-6 md:ms-0 ms-6 bg-white relative">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="flex justify-between items-center mb-6">
+        <div className="flex justify-between items-center ">
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 text-center w-full">
             Our Student Works Portfolio
           </h2>
@@ -84,42 +84,43 @@ export default function StudentPortfolioCarousel() {
         {/* Scrollable Cards */}
         <div
           ref={scrollRef}
-          className="flex gap-4 overflow-x-auto no-scrollbar scroll-smooth snap-x snap-mandatory px-1 py-4 sm:px-6  shadow-xl"
-        >
+          className="flex gap-4 overflow-x-auto no-scrollbar scroll-smooth snap-x snap-mandatory px-4 py-6">
           {students.map((student, index) => (
             <div
               key={index}
-              className="snap-start flex-shrink-0 w-[80%] sm:w-[calc(44%-1rem)] md:w-[calc(25.333%-1rem)] bg-[#652f8e] text-white rounded-xl shadow-md overflow-hidden hover:scale-[1.02] transition"
+              className="snap-start flex-shrink-0 w-[80%] sm:w-[calc(44%-1rem)] md:w-[calc(25.333%-1rem)] bg-[#f3e8ff] text-[#4c0574] rounded-xl shadow-md overflow-hidden hover:scale-[1.02] transition-transform"
             >
-              <Image
-                src={student.image}
-                alt={student.name}
-                width={300}
-                height={180}
-                className="w-full p-4 h-76 object-cover"
-              />
-              <div className="p-3">
-                <h3 className="font-bold text-md mb-1">Student Name: {student.name}</h3>
-                <p className="text-xs mb-3">Software: {student.software}</p>
-
+              <div className="flex justify-center mt-4">
+                <div className="w-24 h-24 rounded-full overflow-hidden border-4 border-white shadow-md">
+                  <Image
+                    src={student.image}
+                    alt={student.name}
+                    width={100}
+                    height={100}
+                    className="object-cover w-full h-full"
+                  />
+                </div>
+              </div>
+              <div className="p-4 text-center">
+                <h3 className="font-bold text-md mb-2">{student.name}</h3>
+                <p className="text-xs mb-4">{student.software}</p>
                 <a
                   href={student.portfolioUrl}
-                  className="inline-block bg-white text-[#652f8e] text-xs font-semibold px-3 py-1 rounded-full transition"
+                  className="inline-block bg-[#652f8e] text-white text-xs font-semibold px-4 py-2 rounded-full transition hover:bg-[#4a2160]"
                 >
-                  <Eye className="inline w-4 h-4 mr-1" /> Portfolio
+                  Portfolio
                 </a>
-
-                <div className="mt-2 flex justify-between items-center text-[11px] text-white">
+                <div className="mt-4 flex justify-center items-center gap-4 text-[11px] text-gray-600">
                   <span className="flex items-center gap-1">
-                    <Eye className="w-4 h-4" /> 345
+                    <Eye className="w-4 h-4" /> 345 views
                   </span>
-                  <Share2 className="w-4 h-4 hover:text-white transition" />
+                  <Share2 className="w-4 h-4 cursor-pointer hover:text-[#652f8e]" />
                 </div>
               </div>
             </div>
           ))}
-        </div>
-      </div>
-    </section>
+        </div>  
+        </div> 
+         </section>
   );
 }

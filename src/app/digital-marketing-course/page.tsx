@@ -127,8 +127,8 @@ function Page() {
                             {[
                                 "/Youtube logo.svg",
                                 "/Googel Logo.svg",
-                                "/amazon.png",
-                                "/spotify.png",
+                                // "/amazon.png",
+                                // "/spotify.png",
                                 "/bing logo.svg",
                                 "/Instagram Logo.svg",
                                 "/Yahoo.svg",
@@ -137,10 +137,10 @@ function Page() {
                                 <Image
                                     key={index}
                                     src={logo}
-                                    width={100}
-                                    height={100}
+                                    width={80}
+                                    height={80}
                                     alt={`Company ${index + 1}`}
-                                    className="h-14 w-auto mx-4"
+                                    className="h-8 w-auto mx-4"
                                 />
                             ))}
                             {[
@@ -156,10 +156,10 @@ function Page() {
                                 <Image
                                     key={`repeat-${index}`}
                                     src={logo}
-                                    width={100}
-                                    height={100}
+                                    width={80}
+                                    height={800}
                                     alt={`Company ${index + 1}`}
-                                    className="h-14 w-auto mx-2"
+                                    className="h-8 w-auto mx-2"
                                 />
                             ))}
                         </div>

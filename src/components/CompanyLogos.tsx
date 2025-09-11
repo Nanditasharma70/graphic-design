@@ -14,7 +14,7 @@ const logos = [
   { name: 'job7', src: '/Job-07.webp' },
   { name: 'job8', src: '/Job-08.webp' },
   { name: 'job9', src: '/Job-09.webp' },
-   { name: 'job10', src: '/Job-03.webp' },
+  { name: 'job10', src: '/Job-03.webp' },
   { name: 'job11', src: '/Job-04.webp' },
   { name: 'job12', src: '/Job-05.webp' },
   { name: 'job13', src: '/Job-06.webp' },
@@ -67,7 +67,7 @@ export default function CompanyLogos() {
   }, []);
 
   return (
-    <section className="py-12 relative  border-4 border-purple-900 rounded-lg  md:border-none mx-1">
+    <section className="py-12 relative  rounded-lg   mx-1">
       <div className="max-w-6xl mx-auto px-4">
         {/* Header */}
         <div className="flex justify-between items-center mb-6 relative">
@@ -95,10 +95,10 @@ export default function CompanyLogos() {
         </div>
 
         {/* Logo Container */}
-       <div className="overflow-hidden mx-auto md:w-[832px] h-[260px] md:h-auto">
-  <div
-    ref={scrollRef}
-    className={`
+        <div className="overflow-hidden mx-auto md:w-[832px] h-[260px] md:h-auto">
+          <div
+            ref={scrollRef}
+            className={`
      
       no-scrollbar
       h-[300px] md:h-auto
@@ -108,22 +108,28 @@ export default function CompanyLogos() {
       md:overflow-x-auto 
       md:overflow-y-hidden
     `}
-  >
-    {logos.map((logo, idx) => (
-      <div
-        key={idx}
-        className="h-28 w-full md:w-[140px] flex-shrink-0 relative"
-      >
-        <Image
-          src={logo.src}
-          alt={logo.name}
-          fill
-          className="object-contain"
-        />
-      </div>
-    ))}
-  </div>
-</div>
+          >
+            {logos.map((logo, idx) => (
+              <div
+                key={idx}
+                className="w-32 bg-white rounded-lg shadow-md p-4 flex flex-col items-center gap-4 my-2"
+              >
+                <div className="h-20 w-20 relative">
+                  <Image
+                    src={logo.src}
+                    alt={logo.name}
+                    fill
+                    className="object-contain border-2 border-purple-500 rounded-full"
+                  />
+                </div>
+                <h3 className="text-sm font-semibold text-gray-700 text-center">
+                  {logo.name}
+                </h3>
+              </div>
+
+            ))}
+          </div>
+        </div>
 
 
         {/* CTA (Desktop only) */}
@@ -136,6 +142,6 @@ export default function CompanyLogos() {
           </p>
         </div>
       </div>
-    </section>
+    </section >
   );
 }

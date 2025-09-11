@@ -67,7 +67,7 @@ export default function CompanyLogos() {
   }, []);
 
   return (
-    <section className="py-12 mt-8 relative  border-4 border-purple-900 rounded-lg  md:border-none mx-1">
+    <section className="py-12 mt-8 relative border-purple-900 rounded-lg  md:border-none mx-1">
       <div className="max-w-6xl mx-auto px-4">
         {/* Header */}
         <div className="flex justify-between items-center mb-6 relative">
@@ -101,26 +101,31 @@ export default function CompanyLogos() {
     className={`
      
       no-scrollbar
-      h-[300px] md:h-auto
+      h-[300px]  md:h-auto
       overflow-auto
-      grid grid-cols-2 gap-4
+      grid grid-cols-2 gap-2
       md:flex md:gap-6 
       md:overflow-x-auto 
       md:overflow-y-hidden
     `}
   >
     {logos.map((logo, idx) => (
-      <div
-        key={idx}
-        className="h-28 w-full md:w-[140px] flex-shrink-0 relative"
-      >
-        <Image
-          src={logo.src}
-          alt={logo.name}
-          fill
-          className="object-contain"
-        />
-      </div>
+     <div
+                     key={idx}
+                     className="w-38 bg-purple-100 rounded-lg shadow-md p-4 flex flex-col items-center gap-4 my-2"
+                   >
+                     <div className="h-20 w-20 relative">
+                       <Image
+                         src={logo.src}
+                         alt={logo.name}
+                         fill
+                         className="object-contain border-2 border-purple-500 rounded-full"
+                       />
+                     </div>
+                     <h3 className="text-sm font-semibold text-gray-700 text-center">
+                       {logo.name}
+                     </h3>
+                   </div>
     ))}
   </div>
 </div>

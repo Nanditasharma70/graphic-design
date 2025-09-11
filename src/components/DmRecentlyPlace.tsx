@@ -61,15 +61,13 @@ export default function PlacedStudentsGallery() {
   };
 
   return (
-   <section className=" md:py-10 relative border-l-4 border-r-4 border-b-4 rounded-lg border-gray-200 mx-1 md:border-none">
+   <section className=" md:py-10 relative rounded-lg  mx-1 md:border-none">
   <div className="max-w-7xl mx-auto">
     {/* Title with border effect (only mobile) */}
-    <div className="relative flex justify-center md:hidden ">
-      {/* Top border line */}
-      <div className="absolute top-0 left-0 w-full border-t-4 border-gray-200"></div>
-
+    <div className="relative flex justify-center my-4">
+  
       {/* Title overlapping top border */}
-      <h2 className="relative z-10 px-3 -mt-3 bg-black text-lg font-semibold text-center text-gray-300">
+      <h2 className="relative z-10 px-3 bg-black text-lg font-semibold text-center text-gray-300">
         Our Recently <span className="text-2xl font-bold">Placed students</span>
       </h2>
     </div>
@@ -84,33 +82,32 @@ export default function PlacedStudentsGallery() {
         md:flex md:gap-6 md:overflow-x-auto md:overflow-y-hidden
       "
     >
-      <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:flex md:gap-6">
-        {students.map((student, index) => (
-          <div
-            key={index}
-            onClick={() => handleCardClick(index)}
-            className={`bg-black rounded-xl shadow-md overflow-hidden w-full md:w-[240px] flex-shrink-0 cursor-pointer
-              ${tappedIndex === index ? 'ring-2 ring-purple-600' : ''}`}
-          >
-            {/* Student Image */}
-            <div className="relative w-full h-[220px]">
-              <Image
-                src={student.img}
-                alt={student.name}
-                fill
-                className="object-cover"
-              />
-            </div>
-
-            {/* Student Details */}
-            <div className="p-4 text-center">
-              <p className="text-gray-200 font-semibold text-lg">{student.name}</p>
-              <p className="text-gray-300 text-sm italic">{student.title}</p>
-              <p className="text-gray-300 text-sm">{student.company}</p>
-            </div>
-          </div>
-        ))}
-      </div>
+     <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:flex md:gap-4 my-4">
+                {students.map((student, index) => (
+                  <div
+                    key={index}
+                    onClick={() => handleCardClick(index)}
+                    className={`bg-[#f3e8ff] rounded-xl shadow-md p-4 text-center cursor-pointer transition-transform hover:scale-105
+                ${tappedIndex === index ? 'ring-2 ring-purple-600' : ''}`}
+                  >      {/* Student Image */}
+                    <div className="w-28 h-28 mx-auto rounded-full border-4 border-[#652f8e] overflow-hidden">
+                      <Image
+                        src={student.img}
+                        alt={student.name}
+                        width={100}
+                        height={100}
+                        className="object-cover w-full h-full"
+                      />
+                    </div>
+    
+    
+                    {/* Student Info */}
+                    <p className="text-[#652f8e] font-semibold text-lg">{student.name}</p>
+                    <p className="text-gray-600 text-sm italic">{student.title}</p>
+                    <p className="text-gray-700 text-sm">{student.company}</p>
+                  </div>
+                ))}
+              </div>
     </div>
   </div>
 </section>

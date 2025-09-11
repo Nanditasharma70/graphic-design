@@ -131,19 +131,19 @@ export default function DigitalMarketingModules() {
         </p>
 
         {/* Modules Grid */}
-        <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-3 md:gap-4 gap-2 ">
+        <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-3 md:gap-4 gap-2 ">
           {cards.map((card, i) => (
             <div
               key={i}
               className="bg-white rounded-2xl shadow-lg flex flex-col items-center justify-between py-2 px-1 hover:shadow-xl transition"
             >
               {/* Title */}
-              <h3 className="text-lg font-bold text-center text-black">
+              <h3 className="text-md font-bold text-center text-black">
                 {card.title}
               </h3>
 
               {/* Icon/Image */}
-              <div className="my-2 w-24 h-24 relative">
+              <div className="my-2 w-14 h-14 relative">
                 <Image
                   src={card.img}
                   alt={card.title}
@@ -176,8 +176,8 @@ export default function DigitalMarketingModules() {
 
       {/* Popup Modal */}
       {activeCard !== null && (
-        <div className="fixed inset-0 flex items-center justify-center bg-opacity-70 z-50">
-          <div className="bg-white max-w-sm w-full rounded-2xl shadow-xl p-6 relative m-4">
+        <div className="fixed inset-0 flex items-center justify-center bg-opacity-70  z-50">
+          <div className="bg-white max-w-sm w-full rounded-2xl  shadow-2xl p-6 relative m-4">
             {/* Close Button */}
             <button
               className="absolute top-3 right-3 text-2xl font-bold text-gray-600 hover:text-black"
